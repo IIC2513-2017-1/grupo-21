@@ -1,0 +1,42 @@
+<%= form_for(player) do |f| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :apellido %>
+    <%= f.text_field :apellido, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nacionalidad %>
+    <%= f.text_field :nacionalidad, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :edad %>
+    <%= f.number_field :edad, :required => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :team_id %>
+    <%= f.select :team_id, Team.all.collect { |team| [ team.nombre, team.id ] }, { include_blank: true }, { required: true } %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: tournaments
+#
+#  id         :integer          not null, primary key
+#  nombre     :string
+#  tipo       :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  tipo: 1
+
+two:
+  nombre: MyString
+  tipo: 1

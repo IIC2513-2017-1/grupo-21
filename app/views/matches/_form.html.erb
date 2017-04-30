@@ -1,0 +1,47 @@
+<%= form_for(match) do |f| %>
+  <% if match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.datetime_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :goles_local %>
+    <%= f.number_field :goles_local %>
+  </div>
+
+  <div class="field">
+    <%= f.label :goles_visita %>
+    <%= f.number_field :goles_visita %>
+  </div>
+
+  <div class="field">
+    <%= f.label :penales %>
+    <%= f.check_box :penales %>
+  </div>
+
+  <div class="field">
+    <%= f.label :penales_local %>
+    <%= f.number_field :penales_local %>
+  </div>
+
+  <div class="field">
+    <%= f.label :penales_visita %>
+    <%= f.number_field :penales_visita %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
