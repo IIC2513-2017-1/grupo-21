@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'annotate'
+gem 'faker'
+gem 'simple_form'
+gem 'countries'
+gem 'country_select'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

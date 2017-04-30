@@ -1,36 +1,9 @@
-<%= form_for(tournament) do |f| %>
-  <% if tournament.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tournament.errors.count, "error") %> prohibited this tournament from being saved:</h2>
-
-      <ul>
-      <% tournament.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= simple_form_for @tournament do |f| %>
+  <%= f.input :nombre, required: true %>
+  <%= f.input :tipo do %>
+    <%= f.select :tipo, dict_tipo.map { |k, v| [v, k, { class: k }] },
+    {include_blank: true}, :required => true %>
   <% end %>
-
-  <div class="field">
-    <%= f.label :nombre %>
-    <%= f.text_field :nombre, :required => true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tipo %>
-    <%= f.select(:tipo) do %>
-      <% [['Liga', 1], ['Play-Off', 2], ['Liga + Play-Off', 3]].each do |c| -%>
-        <%= content_tag(:option, c.first, value: c.last) %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Participantes" %>
-      <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.association :teams, label_method: :nombre, as: :check_boxes %>
+  <%= f.button :submit %>
 <% end %>

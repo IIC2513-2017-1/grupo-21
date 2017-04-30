@@ -12,12 +12,17 @@
 
 <p>
   <strong>Nacionalidad:</strong>
-  <%= @player.nacionalidad %>
+  <%= @player.pais %>
 </p>
 
 <p>
   <strong>Edad:</strong>
   <%= @player.edad %>
+</p>
+
+<p>
+  <strong>Equipo:</strong>
+  <%= Team.find_by_id(@player.team_id).nombre %>
 </p>
 
 

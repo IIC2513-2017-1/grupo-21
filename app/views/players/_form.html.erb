@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :nacionalidad %>
-    <%= f.text_field :nacionalidad, :required => true %>
+    <%= f.label :pais %>
+    <%= f.country_select :pais, { include_blank: 'Selecciona un país' } %>
   </div>
 
   <div class="field">
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= f.label :team_id %>
-    <%= f.select :team_id, Team.all.collect { |team| [ team.nombre, team.id ] }, { include_blank: true }, { required: true } %>
+    <%= f.select :team_id, Team.all.collect { |team| [ team.nombre, team.id ] }, { include_blank: 'Selecciona el equipo' }, { required: true } %>
   </div>
 
   <div class="actions">
