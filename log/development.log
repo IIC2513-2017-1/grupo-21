@@ -2820,3 +2820,2041 @@ Processing by TournamentsController#index as HTML
 Completed 200 OK in 78ms (Views: 71.3ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/tournaments" for ::1 at 2017-04-30 03:37:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 1911ms (Views: 1728.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/tournaments/2" for ::1 at 2017-04-30 03:37:09 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 42.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 03:37:11 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 96ms (Views: 92.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:37:17 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (224.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (227.1ms)
+Completed 200 OK in 282ms (Views: 232.2ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:37:36 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (7.6ms)
+  Rendered tournaments/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 283ms (Views: 246.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:38:17 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (12.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 577ms (Views: 515.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:38:19 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (4.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:41:57 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (22.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 394ms (Views: 370.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 03:42:08 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"626B8quWZCV7ikXeGgk7ecDe0Ed5x77YZoF/o9IhoksTJuyzIGd6xPQGr8mS+yz1IMOGkcegmzUneLOmmQfCWQ==", "tournament"=>{"nombre"=>"Confederaciones", "tipo"=>"1"}, "hola"=>"1", "commit"=>"Create Tournament"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.7ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Confederaciones"], ["tipo", 1], ["created_at", 2017-04-30 06:42:08 UTC], ["updated_at", 2017-04-30 06:42:08 UTC]]
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/3
+Completed 302 Found in 51ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/tournaments/3" for ::1 at 2017-04-30 03:42:08 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 138ms (Views: 134.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 03:42:16 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/3" for ::1 at 2017-04-30 03:42:18 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (2.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 95ms (Views: 86.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for ::1 at 2017-04-30 03:42:32 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 188ms (Views: 154.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/new" for ::1 at 2017-04-30 03:42:34 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (6.1ms)
+  Rendered teams/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 85ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 03:42:38 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WgtoBOwzfb8fGEWypVkNsFJ7yzQvrN6pNk0uqQEJNDBPbzLSnKcMZ5PeozgVo+vINuPUwDNRXHa7LdMye/4Cfw==", "team"=>{"nombre"=>"U de chile", "pais"=>"Chile"}, "commit"=>"Create Team"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "U de chile"], ["pais", "Chile"], ["created_at", 2017-04-30 06:42:38 UTC], ["updated_at", 2017-04-30 06:42:38 UTC]]
+  [1m[35m (60.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/2
+Completed 302 Found in 72ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/teams/2" for ::1 at 2017-04-30 03:42:38 -0300
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 2]]
+  Rendered teams/show.html.erb within layouts/application (182.6ms)
+Completed 200 OK in 316ms (Views: 260.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-04-30 03:42:40 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 120ms (Views: 116.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 03:42:46 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 50.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/2" for ::1 at 2017-04-30 03:42:51 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 03:42:53 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 75ms (Views: 70.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/3" for ::1 at 2017-04-30 03:42:54 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTournament Load (3.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 03:42:55 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:42:55 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (4.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 246ms (Views: 58.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 03:43:24 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (21.6ms)
+  Rendered tournaments/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 299ms (Views: 267.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:03:43 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (5193.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (6244.2ms)
+Completed 200 OK in 11954ms (Views: 5632.6ms | ActiveRecord: 5193.9ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:04:09 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (164.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (599.3ms)
+Completed 200 OK in 2200ms (Views: 2015.0ms | ActiveRecord: 164.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:05:55 -0300
+Started DELETE "/tournaments/2" for ::1 at 2017-04-30 04:06:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s0zoGZGLClfh9wgwat5vNf17RYhkcYbNtYQedC9dDRdLBIVYGnoUtm574ifiLHi5HWYTXtoWoyD0fdJxZHttBQ==", "id"=>"2"}
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (48.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (158.3ms)
+  [1m[36mTournament Load (103.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (162.2ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 4654ms (Views: 4319.6ms | ActiveRecord: 85.5ms)
+
+
+  [1m[35mSQL (1902.4ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  [1m[35mSQL (757.0ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 2]]
+Started DELETE "/tournaments/3" for ::1 at 2017-04-30 04:06:15 -0300
+  [1m[35m (319.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 8011ms (ActiveRecord: 3523.3ms)
+
+
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s0zoGZGLClfh9wgwat5vNf17RYhkcYbNtYQedC9dDRdLBIVYGnoUtm574ifiLHi5HWYTXtoWoyD0fdJxZHttBQ==", "id"=>"3"}
+  [1m[36mTournament Load (1.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 3]]
+  [1m[35mSQL (160.4ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (107.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 284ms (ActiveRecord: 271.7ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:06:16 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 492ms (Views: 485.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:06:20 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (109.0ms)
+  Rendered tournaments/new.html.erb within layouts/application (115.2ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+tag "tournament[teams][]" team.id);@output_buffer.safe_appen
+                              ^):
+  
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb__2076341438731086141_70126269161560'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (287.2ms)
+  [1m[36mTeam Load (19.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" ORDER BY "teams"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments" INNER JOIN "teams_tournaments" ON "tournaments"."id" = "teams_tournaments"."tournament_id" WHERE "teams_tournaments"."team_id" = $1[0m  [["team_id", 1]]
+Started GET "/tournaments" for ::1 at 2017-04-30 04:11:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 2464ms (Views: 2353.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:11:09 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (1.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 9.2ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+ "tournament[team_ids][]" team.id);@output_buffer.safe_appen
+                              ^):
+  
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228110634540'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (158.4ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:11:39 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (2.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+ "tournament[team_ids][]" team.id );@output_buffer.safe_appe
+                              ^):
+  
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228103906800'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.8ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:12:48 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (1.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+ 'tournament[team_ids][]' team.id );@output_buffer.safe_appe
+                              ^):
+  
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228131988300'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.5ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:13:38 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (4.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (1732.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (1736.7ms)
+Completed 200 OK in 2008ms (Views: 1868.2ms | ActiveRecord: 28.2ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:13:49 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qi87oGUd6OaJKsuxUY8PCd/XguQopng37qHHJo9d1ou6Z1bh7uz2BwamIabZfRiFP8rUMpbBXdqvWAsjxHu2mQ==", "tournament"=>{"nombre"=>"Confederaciones", "tipo"=>"1", "team_ids"=>["2"]}, "commit"=>"Create Tournament"}
+Unpermitted parameter: team_ids
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (904.1ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Confederaciones"], ["tipo", 1], ["created_at", 2017-04-30 07:13:49 UTC], ["updated_at", 2017-04-30 07:13:49 UTC]]
+  [1m[35m (182.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/4
+Completed 302 Found in 1099ms (ActiveRecord: 1088.5ms)
+
+
+Started GET "/tournaments/4" for ::1 at 2017-04-30 04:13:51 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (83.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 4], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (379.3ms)
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 87.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228140464900'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.1ms)
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:05 -0300
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:08 -0300
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:15 -0300
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:16 -0300
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 4]]
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:19 -0300
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:24 -0300
+Started PUT "/__web_console/repl_sessions/e561c2632b1836f8313b97e44f7f1a1b" for ::1 at 2017-04-30 04:14:36 -0300
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "confederaciones"], ["tipo", 1], ["created_at", 2017-04-30 07:15:14 UTC], ["updated_at", 2017-04-30 07:15:14 UTC]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 5]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (46.0ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "u"], ["pais", "chile"], ["created_at", 2017-04-30 07:15:42 UTC], ["updated_at", 2017-04-30 07:15:42 UTC]]
+  [1m[35mSQL (43.2ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 5], ["team_id", 3], ["created_at", 2017-04-30 07:15:42 UTC], ["updated_at", 2017-04-30 07:15:42 UTC]]
+  [1m[35m (82.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tournaments/4" for ::1 at 2017-04-30 04:15:55 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 4], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228141555200'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.2ms)
+Started GET "/tournaments/4" for ::1 at 2017-04-30 04:16:03 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 4], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228103849260'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.8ms)
+Started GET "/tournaments" for ::1 at 2017-04-30 04:16:18 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 744ms (Views: 698.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+Started GET "/tournaments/4" for ::1 at 2017-04-30 04:17:33 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTournament Load (1.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 4], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228103070040'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.9ms)
+Started GET "/tournaments" for ::1 at 2017-04-30 04:17:36 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (10.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 248ms (Views: 232.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/tournaments/5" for ::1 at 2017-04-30 04:17:38 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 5], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:17:40 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:17:43 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (9.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 143ms (Views: 63.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:17:48 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D7nYs7pzpJSrhmZvS7/OpsLL2wCMe6Al2NXy3Z+HpOtIs/+cP/BwkgR5u1dJ46L2o+OJm/qP1AoHxnfDz4xMUg==", "tournament"=>{"nombre"=>"asd", "tipo"=>"1", "team_ids"=>["1", "2", "3"]}, "commit"=>"Create Tournament"}
+Unpermitted parameter: team_ids
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.1ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "asd"], ["tipo", 1], ["created_at", 2017-04-30 07:17:48 UTC], ["updated_at", 2017-04-30 07:17:48 UTC]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/6
+Completed 302 Found in 40ms (ActiveRecord: 33.0ms)
+
+
+Started GET "/tournaments/6" for ::1 at 2017-04-30 04:17:48 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 6], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228133182740'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.7ms)
+Started PUT "/__web_console/repl_sessions/48bfaffe459c4d97cde324d32c254530" for ::1 at 2017-04-30 04:17:58 -0300
+Started PUT "/__web_console/repl_sessions/48bfaffe459c4d97cde324d32c254530" for ::1 at 2017-04-30 04:18:04 -0300
+Started PUT "/__web_console/repl_sessions/48bfaffe459c4d97cde324d32c254530" for ::1 at 2017-04-30 04:18:05 -0300
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 6]]
+Started GET "/tournaments" for ::1 at 2017-04-30 04:20:33 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 654ms (Views: 640.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/tournaments/6" for ::1 at 2017-04-30 04:20:38 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yYyAOPweJar/InEVGhpSmy/6q3Qrpk8k0qS2rOw8i+cxxO15d+87S3CumwKS6EUXz+f9opXBasmTXXqppxrr9Q==", "id"=>"6"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 6]]
+  [1m[35mSQL (128.4ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 6]]
+  [1m[35m (82.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 230ms (ActiveRecord: 213.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:20:38 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 145ms (Views: 140.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tournaments/4" for ::1 at 2017-04-30 04:20:39 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tRPPPEdyv9eLMxyJ8wPv2ka+Cp6ath9E7Y0cKW9IvthNW6J9zIOhNgS/9p578fhWpqNcSCTROqmsdNAsJG7eyg==", "id"=>"4"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 4]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 4]]
+  [1m[35m (144.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 152ms (ActiveRecord: 146.7ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:20:40 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:20:41 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (8.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 118ms (Views: 54.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:20:46 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (4.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:20:51 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"foISJlGdgMBq49+5QTFWvWPDWk40SOTy7puEpbM8joqGyn9n2myeIeVvNa7Jw0Exg94MmIovwR+vYkig+BrumA==", "tournament"=>{"nombre"=>"hj", "tipo"=>"1"}, "team_ids"=>["1", "2", "3"], "commit"=>"Create Tournament"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "hj"], ["tipo", 1], ["created_at", 2017-04-30 07:20:51 UTC], ["updated_at", 2017-04-30 07:20:51 UTC]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/7
+Completed 302 Found in 47ms (ActiveRecord: 41.5ms)
+
+
+Started GET "/tournaments/7" for ::1 at 2017-04-30 04:20:51 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 7], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228133115600'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.2ms)
+Started GET "/tournaments" for ::1 at 2017-04-30 04:21:02 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 287ms (Views: 282.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:21:06 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 77ms (Views: 73.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/7" for ::1 at 2017-04-30 04:21:13 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 7], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228102306360'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (123.1ms)
+Started GET "/tournaments" for ::1 at 2017-04-30 04:21:16 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 78ms (Views: 73.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:22:48 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (21.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 549ms (Views: 512.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:22:54 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GBMLaChJ4Lmn41WkdY0F4JUnRHeeCPqIBYcn9fMXOg5fGSxHrco0vwgciJx30Wmw9A8W7Oj8jqfalKLroxzStw==", "tournament"=>{"nombre"=>"fghgjk", "tipo"=>"1"}, "team_ids"=>{"2"=>"2", "3"=>"3"}, "commit"=>"Create Tournament"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "fghgjk"], ["tipo", 1], ["created_at", 2017-04-30 07:22:54 UTC], ["updated_at", 2017-04-30 07:22:54 UTC]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/8
+Completed 302 Found in 51ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/tournaments/8" for ::1 at 2017-04-30 04:22:54 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (3.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 8], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228138811200'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.4ms)
+Started GET "/tournaments" for ::1 at 2017-04-30 04:25:06 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 488ms (Views: 470.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:25:07 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (2.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tournaments/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228110521360'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (25.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (240.2ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:25:19 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (868.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (871.1ms)
+Completed 200 OK in 1010ms (Views: 987.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:25:26 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GR7LLmizEeS38kUqZ9rfnYXmys4+F4hFsdM9sw+PAWThVqZv40IPBTh+rz3vKMgRZfucGIBwrajwKvG2RKlhdg==", "tournament"=>{"nombre"=>"sadasd", "tipo"=>"1", "team_ids"=>["", "1", "2"]}, "commit"=>"Create Tournament"}
+Unpermitted parameter: team_ids
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "sadasd"], ["tipo", 1], ["created_at", 2017-04-30 07:25:26 UTC], ["updated_at", 2017-04-30 07:25:26 UTC]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/9
+Completed 302 Found in 51ms (ActiveRecord: 41.9ms)
+
+
+Started GET "/tournaments/9" for ::1 at 2017-04-30 04:25:26 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 9], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228102831180'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.9ms)
+Started PUT "/__web_console/repl_sessions/cf5da7f7f2c3c5066663ae156620c733" for ::1 at 2017-04-30 04:25:44 -0300
+Started PUT "/__web_console/repl_sessions/cf5da7f7f2c3c5066663ae156620c733" for ::1 at 2017-04-30 04:25:47 -0300
+Started PUT "/__web_console/repl_sessions/cf5da7f7f2c3c5066663ae156620c733" for ::1 at 2017-04-30 04:25:53 -0300
+Started PUT "/__web_console/repl_sessions/cf5da7f7f2c3c5066663ae156620c733" for ::1 at 2017-04-30 04:25:53 -0300
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 9]]
+Started GET "/tournaments" for ::1 at 2017-04-30 04:26:15 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 181ms (Views: 172.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tournaments/9" for ::1 at 2017-04-30 04:26:17 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0buhhdeKdPktmsERdNmHvMHDBjTd46lNK4egY9UdFxgp88zEXHtqGKIWKwb8K5AwId5Q4mOEjKBqfmxmnjt3Cg==", "id"=>"9"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 9]]
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 23ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:26:17 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tournaments/8" for ::1 at 2017-04-30 04:26:19 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BRAMsff9g+rnZNQtNrqn+L3y6ahQbSN3ybLzNkwDHkf9WGHwfAydC2joPjq+SLB0Xe+/fu4KBpqISz8zByV+VQ==", "id"=>"8"}
+  [1m[36mTournament Load (1.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 8]]
+  [1m[35mSQL (4.1ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 8]]
+  [1m[35m (49.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 63ms (ActiveRecord: 55.6ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:26:19 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 79ms (Views: 74.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:26:21 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (15.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 4..6)):
+    27: 
+    28:   <div class="field">
+    29:     <%= f.label :participantes %>
+    30:     <%= f.collection_check_boxes(:team_ids, Team.all, :id) %>
+    31: 
+    32:   </div>
+    33: 
+  
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228110716360'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228110716360'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228110764060'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.4ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:26:40 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (14.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_i' for #<Team:0x007fbe86928c80>
+Did you mean?  to_s):
+    27: 
+    28:   <div class="field">
+    29:     <%= f.label :participantes %>
+    30:     <%= f.collection_check_boxes(:team_ids, Team.all, :id, :to_i) %>
+    31: 
+    32:   </div>
+    33: 
+  
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228110086800'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228110086800'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228110182900'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (110.2ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:26:54 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (12.9ms)
+  Rendered tournaments/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 106ms (Views: 95.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:29:10 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 342ms (Views: 295.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:29:12 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (60.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 209ms (Views: 193.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:29:15 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OdjyrHhb+xlthAvL+VYtXtq1r2EVXEeNryQqPQC6TZZ+0tWD/dgvH8J71vP7CkEOu539+mOoM6JwN68jULGlLw==", "tournament"=>{"nombre"=>"asdasd", "tipo"=>"1", "team_ids"=>["1"]}, "commit"=>"Create Tournament"}
+Unpermitted parameter: team_ids
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (126.5ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "asdasd"], ["tipo", 1], ["created_at", 2017-04-30 07:29:15 UTC], ["updated_at", 2017-04-30 07:29:15 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/10
+Completed 302 Found in 140ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/tournaments/10" for ::1 at 2017-04-30 04:29:16 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 10], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228132447060'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.4ms)
+Started POST "/tournaments" for ::1 at 2017-04-30 04:29:26 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r81gzx3mETlhHz1bXtanXOlwfmjeqQZhBPhuEUUkFu5XhQ2OlhcP2O6T10zWJLDQCW0ovmDOI4xFAaIUDgJ2/A==", "tournament"=>{"nombre"=>"asdasd", "tipo"=>"1", "team_ids"=>["1", "2"]}, "commit"=>"Create Tournament"}
+Unpermitted parameter: team_ids
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "asdasd"], ["tipo", 1], ["created_at", 2017-04-30 07:29:26 UTC], ["updated_at", 2017-04-30 07:29:26 UTC]]
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/11
+Completed 302 Found in 47ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/tournaments/11" for ::1 at 2017-04-30 04:29:26 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 11], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228110557060'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.0ms)
+  [1m[36mTeam Load (2.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 3[0m
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (3, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 5], ["team_id", 2], ["created_at", 2017-04-30 07:33:13 UTC], ["updated_at", 2017-04-30 07:33:13 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tournaments" for ::1 at 2017-04-30 04:34:50 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 491ms (Views: 448.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:34:51 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (43.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 104ms (Views: 82.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:34:54 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2QIhE0BZyXABQkZ29Tmkf5tGxB0b/FpZPKHez3CsrHueCAY8xdoddq69m073Zcgv+m6Whm0ILnbjslvRIKdEwg==", "tournament"=>{"nombre"=>"dddddd", "tipo"=>"1", "team_ids"=>["1"]}, "commit"=>"Create Tournament"}
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE 1=0[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "dddddd"], ["tipo", 1], ["created_at", 2017-04-30 07:34:55 UTC], ["updated_at", 2017-04-30 07:34:55 UTC]]
+  [1m[35m (32.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/12
+Completed 302 Found in 73ms (ActiveRecord: 35.4ms)
+
+
+Started GET "/tournaments/12" for ::1 at 2017-04-30 04:34:55 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 12], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>participantes:</strong>
+    15:   <%= @tournament.teams.first.nombre %>
+    16: </p>
+    17: 
+    18: <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228151743600'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (111.0ms)
+Started PUT "/__web_console/repl_sessions/08c33fc27586d86a02a6d4424953ead4" for ::1 at 2017-04-30 04:35:00 -0300
+Started PUT "/__web_console/repl_sessions/08c33fc27586d86a02a6d4424953ead4" for ::1 at 2017-04-30 04:35:06 -0300
+Started PUT "/__web_console/repl_sessions/08c33fc27586d86a02a6d4424953ead4" for ::1 at 2017-04-30 04:35:07 -0300
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 12]]
+Started PUT "/__web_console/repl_sessions/08c33fc27586d86a02a6d4424953ead4" for ::1 at 2017-04-30 04:35:11 -0300
+Started GET "/tournaments" for ::1 at 2017-04-30 04:41:40 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 586ms (Views: 552.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:41:43 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (91.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (94.4ms)
+Completed 200 OK in 208ms (Views: 169.8ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:41:46 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kcp5/TVqEY0R1OPQKy2O6FSRAn4H9sKLA68VYjNWxeduwF7SsOnFi74rPugpceK4NblQ5XECtqTcvJB8Y10tXg==", "tournament"=>{"nombre"=>"asd", "tipo"=>"1", "team_ids"=>["", "3"]}, "commit"=>"Create Tournament"}
+  [1m[36mTeam Load (2.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "asd"], ["tipo", 1], ["created_at", 2017-04-30 07:41:46 UTC], ["updated_at", 2017-04-30 07:41:46 UTC]]
+  [1m[35mSQL (41.4ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 13], ["team_id", 3], ["created_at", 2017-04-30 07:41:46 UTC], ["updated_at", 2017-04-30 07:41:46 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/13
+Completed 302 Found in 126ms (ActiveRecord: 51.7ms)
+
+
+Started GET "/tournaments/13" for ::1 at 2017-04-30 04:41:46 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 13], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:41:49 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:41:50 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (15.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 115ms (Views: 111.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:41:55 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oq4e3SxvVySCz8fVsVBst5A1C+q3HmxOFChhVNFtc7jlpDnyqeyDIi0wGu2zDADn8R1ZccHqGGHLO+RKgWabAQ==", "tournament"=>{"nombre"=>"asdasdasd", "tipo"=>"1", "team_ids"=>["", "1", "2"]}, "commit"=>"Create Tournament"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "asdasdasd"], ["tipo", 1], ["created_at", 2017-04-30 07:41:55 UTC], ["updated_at", 2017-04-30 07:41:55 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 14], ["team_id", 1], ["created_at", 2017-04-30 07:41:55 UTC], ["updated_at", 2017-04-30 07:41:55 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 14], ["team_id", 2], ["created_at", 2017-04-30 07:41:55 UTC], ["updated_at", 2017-04-30 07:41:55 UTC]]
+  [1m[35m (45.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/14
+Completed 302 Found in 63ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/tournaments/14" for ::1 at 2017-04-30 04:41:55 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1 ORDER BY "teams"."id" ASC LIMIT $2[0m  [["tournament_id", 14], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tournaments/14" for ::1 at 2017-04-30 04:43:08 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  Rendered tournaments/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `teams' for nil:NilClass):
+    12: 
+    13: <p>
+    14:   <strong>Participantes:</strong>
+    15:   <% @tournaments.teams.each do |team| %>
+    16:     <br>
+    17:     <%= team.nombre %>
+    18:   <% end %>
+  
+app/views/tournaments/show.html.erb:15:in `_app_views_tournaments_show_html_erb___603821020288527340_70228103123540'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.3ms)
+Started GET "/tournaments/14" for ::1 at 2017-04-30 04:43:25 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 14]]
+  Rendered tournaments/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 707ms (Views: 701.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:31 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/tournaments/5" for ::1 at 2017-04-30 04:43:33 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OSC6JMaqZgU3gt1z4IviTsE+ckRPh7XrCm9Fmsz8WDrBaNdlTVt45LgON2RoefXCISMkkvHgkAZLlomfh9o4KA==", "id"=>"5"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 5]]
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 5]]
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 55ms (ActiveRecord: 45.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:33 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/tournaments/7" for ::1 at 2017-04-30 04:43:36 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1xGEvdi2+zDcDL/V/Squ8btKcB99NwQJH14UIYBX0IAvWen8U0fl0VOAVcJ12Ll9W1cmycNQIeRep9gky3Gwkg==", "id"=>"7"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 7]]
+  [1m[35mSQL (3.1ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 11ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:36 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 119ms (Views: 114.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tournaments/10" for ::1 at 2017-04-30 04:43:38 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MmJzH1V/ToyDY0V6i+ZUxKEt3Cgr9OQD40e6TRfxOz/KKh5e3o5QbQzvr20DFENIQTCK/pWTwe6ivnZIXNdbLQ==", "id"=>"10"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 10]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 10]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 51ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:38 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 221ms (Views: 216.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tournaments/11" for ::1 at 2017-04-30 04:43:40 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O+BHfcbsSDjD9FWXDMGP72d8SVttAiRCVuLrLIVNklHDqCo8TR1W2Ux4v4CEM5hjh2EfjdNlAa8XGycpzmvyQw==", "id"=>"11"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 11]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 11]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 47ms (ActiveRecord: 41.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:40 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tournaments/12" for ::1 at 2017-04-30 04:43:43 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mq8uByQ9BTRGGABwy2vBs44l4U4sUMvTv1TRLlnSVY9i50NGr8wb1cmU6mdDmdY/bji3mJI37j7+rR0rEvQ1nQ==", "id"=>"12"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 12]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 16ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:43 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/tournaments/13" for ::1 at 2017-04-30 04:43:45 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XRBSCoNd2LshqCOX50wv2TJXhbxOI2s2UZGeGr1EYVulWD9LCKzGWq4kyYBvvjhV0krTavBETtsQaFIf9mIBSQ==", "id"=>"13"}
+  [1m[36mTournament Load (2.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 13]]
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 13]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 52ms (ActiveRecord: 45.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:45 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tournaments/14" for ::1 at 2017-04-30 04:43:47 -0300
+Processing by TournamentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Lk3QJJbdNWG6EBZo53hBk4YNAHK0dvPvM5dDs3tTrvrWBb1lHSwrgDWc/H9vilYfZhBWpAoR1gJybo+2MHXO6A==", "id"=>"14"}
+  [1m[36mTournament Load (2.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 14]]
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "tournaments" WHERE "tournaments"."id" = $1[0m  [["id", 14]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments
+Completed 302 Found in 16ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:43:47 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 186ms (Views: 183.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:43:49 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (16.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 72ms (Views: 58.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:44:25 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (34.9ms)
+  Rendered tournaments/new.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 992ms (Views: 938.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:46:48 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (56.6ms)
+  Rendered tournaments/new.html.erb within layouts/application (65.5ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "<label for=\"tournament_team_ids_1\">colocolo</label>":ActiveSupport::SafeBuffer):
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:       <div class="collection-check-box">
+    32:         <%= b.check_box b.label %>
+    33:       </div>
+    34:     <% end %>
+    35:   </div>
+  
+app/views/tournaments/_form.html.erb:32:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228131746020'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228131746020'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228131746020'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228138646520'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.5ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:47:30 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (2.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (307.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (311.0ms)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hola' for #<#<Class:0x007fbe83218268>:0x007fbe86cbea98>):
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:       <div class="collection-check-box">
+    32:         <%= b.check_box hola %>
+    33:       </div>
+    34:     <% end %>
+    35:   </div>
+  
+app/views/tournaments/_form.html.erb:32:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228132823400'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228132823400'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228132823400'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228141013740'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.7ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:47:42 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (9.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "hola":String):
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:       <div class="collection-check-box">
+    32:         <%= b.check_box "hola" %>
+    33:       </div>
+    34:     <% end %>
+    35:   </div>
+  
+app/views/tournaments/_form.html.erb:32:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228156124700'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228156124700'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228156124700'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228156192520'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (108.8ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:48:21 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (340.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (342.6ms)
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `hola' for #<#<Class:0x007fbe83218268>:0x007fbe88050868>):
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:       <div class="collection-check-box">
+    32:         <%= b.check_box %> <%= hola %>
+    33:       </div>
+    34:     <% end %>
+    35:   </div>
+  
+app/views/tournaments/_form.html.erb:32:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228104257780'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228104257780'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228104257780'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228151273800'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.3ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:48:32 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (5.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 215ms (Views: 191.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:48:44 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (6.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 106ms (Views: 82.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:48:56 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (8.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 131ms (Views: 85.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:49:14 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (7.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (66.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 512ms (Views: 457.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:52:43 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (20.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (27.2ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :nombre:Symbol):
+    27: 
+    28:   <div class="field">
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes(:tournament, :team_ids, Team.all, :id, :nombre) %>
+    31:   </div>
+    32: 
+    33:   <div class="actions">
+  
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228134119380'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228134119380'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228134153020'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (73.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (159.2ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:54:00 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (31.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 593ms (Views: 569.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:54:06 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vyVN2SICmmJl/PeQF1Sh6/VpFr6I0aYk7utmO+MayjxHbSCYqfOEg+pwHYefprZnFXRAaDa2g8mvEqo+qDyqLg==", "tournament"=>{"nombre"=>"as", "tipo"=>"1", "team_ids"=>["", "1", "2"]}, "commit"=>"Create Tournament"}
+  [1m[36mTeam Load (3.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "as"], ["tipo", 1], ["created_at", 2017-04-30 07:54:06 UTC], ["updated_at", 2017-04-30 07:54:06 UTC]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 15], ["team_id", 1], ["created_at", 2017-04-30 07:54:06 UTC], ["updated_at", 2017-04-30 07:54:06 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 15], ["team_id", 2], ["created_at", 2017-04-30 07:54:06 UTC], ["updated_at", 2017-04-30 07:54:06 UTC]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/15
+Completed 302 Found in 80ms (ActiveRecord: 48.3ms)
+
+
+Started GET "/tournaments/15" for ::1 at 2017-04-30 04:54:06 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 15]]
+  Rendered tournaments/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 104ms (Views: 98.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tournaments/15/edit" for ::1 at 2017-04-30 04:54:25 -0300
+Processing by TournamentsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering tournaments/edit.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (2.0ms)
+  Rendered tournaments/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+uffer.append=( { b.check_box } b.label);@output_buffer.safe_
+                              ^):
+  
+app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+app/views/tournaments/edit.html.erb:3:in `_app_views_tournaments_edit_html_erb___2607331372000358579_70228104127400'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (39.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (145.3ms)
+Started GET "/tournaments/15" for ::1 at 2017-04-30 04:54:33 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (55.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 15]]
+  Rendered tournaments/show.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 329ms (Views: 267.6ms | ActiveRecord: 56.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:54:35 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:54:36 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (1.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+uffer.append=( { b.check_box } b.label);@output_buffer.safe_
+                              ^):
+  
+app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228142348920'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (156.7ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:54:52 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (4.1ms)
+  Rendered tournaments/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+uffer.append=( { b.check_box }, b.label);@output_buffer.safe
+                              ^):
+  
+app/views/tournaments/_form.html.erb:32: syntax error, unexpected '}', expecting =>
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228111088000'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (152.9ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:55:08 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (1.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:32: syntax error, unexpected ')', expecting '='
+ppend=( b.check_box , b.label);@output_buffer.safe_append='
+                              ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tournaments/_form.html.erb:32: syntax error, unexpected ')', expecting '='
+app/views/tournaments/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:40: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:42: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tournaments/_form.html.erb:44: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228110488000'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.4ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (133.3ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:56:15 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (16.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 478ms (Views: 443.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/tournaments" for ::1 at 2017-04-30 04:56:25 -0300
+Processing by TournamentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePQ7wLYqdUlxvU1bIqjshYJ1iuv3WaWHmYF3Dq6DqVSAvFaBPdtrqP4xp0yqWvsJYmjcPUk+gGrYeLsL5aXJRg==", "tournament"=>{"nombre"=>"xdd", "tipo"=>"1", "team_ids"=>["", "1"]}, "commit"=>"Create Tournament"}
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "xdd"], ["tipo", 1], ["created_at", 2017-04-30 07:56:25 UTC], ["updated_at", 2017-04-30 07:56:25 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 16], ["team_id", 1], ["created_at", 2017-04-30 07:56:25 UTC], ["updated_at", 2017-04-30 07:56:25 UTC]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tournaments/16
+Completed 302 Found in 42ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/tournaments/16" for ::1 at 2017-04-30 04:56:25 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 16]]
+  Rendered tournaments/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 152ms (Views: 146.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:56:29 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 181ms (Views: 172.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/16" for ::1 at 2017-04-30 04:56:31 -0300
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (3.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 16]]
+  Rendered tournaments/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 103ms (Views: 93.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-04-30 04:56:33 -0300
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  Rendered tournaments/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 78ms (Views: 70.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:56:34 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (6.3ms)
+  Rendered tournaments/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 94ms (Views: 74.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:59:28 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (57.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 377ms (Views: 340.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 04:59:41 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (10.9ms)
+  Rendered tournaments/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 98ms (Views: 86.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:00:41 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (43.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 877ms (Views: 778.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:03:29 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (35.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (43.6ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of ActiveSupport::SafeBuffer into Hash):
+    28:   <div class="field">
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:         <%= b.label b.label {b.check_box} %>  
+    32:     <% end %>
+    33:   </div>
+    34: 
+  
+app/views/tournaments/_form.html.erb:31:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228131694280'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228131694280'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228131694280'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228131812720'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.7ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:04:19 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (30.2ms)
+  Rendered tournaments/new.html.erb within layouts/application (37.3ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Hash):
+    28:   <div class="field">
+    29:     <%= f.label "Participantes" %>
+    30:     <%= f.collection_check_boxes :team_ids, Team.all, :id, :nombre do |b| %>
+    31:         <%= b.label("coloclo") {b.check_box} %>  
+    32:     <% end %>
+    33:   </div>
+    34: 
+  
+app/views/tournaments/_form.html.erb:31:in `block (2 levels) in _app_views_tournaments__form_html_erb___4296965420871394478_70228132614780'
+app/views/tournaments/_form.html.erb:30:in `block in _app_views_tournaments__form_html_erb___4296965420871394478_70228132614780'
+app/views/tournaments/_form.html.erb:1:in `_app_views_tournaments__form_html_erb___4296965420871394478_70228132614780'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228140815020'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (95.2ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:04:29 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (9.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 207ms (Views: 203.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:06:17 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  Rendered tournaments/_form.html.erb (5.7ms)
+  Rendered tournaments/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting =>
+_buffer.append=( {b.check_box} );@output_buffer.safe_append=
+                              ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/tournaments/_form.html.erb:42: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tournaments/_form.html.erb:31: syntax error, unexpected '}', expecting =>
+app/views/tournaments/_form.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/_form.html.erb:40: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tournaments/_form.html.erb:42: syntax error, unexpected keyword_end, expecting ')'
+app/views/tournaments/new.html.erb:3:in `_app_views_tournaments_new_html_erb___2584635307149383418_70228140861280'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.7ms)
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:09:22 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (55.8ms)
+  Rendered tournaments/new.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 774ms (Views: 599.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/tournaments/new" for ::1 at 2017-04-30 05:09:34 -0300
+Processing by TournamentsController#new as HTML
+  Rendering tournaments/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (40.5ms)
+  Rendered tournaments/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 159ms (Views: 116.2ms | ActiveRecord: 0.8ms)
+
+

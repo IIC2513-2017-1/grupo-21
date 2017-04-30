@@ -10,5 +10,13 @@
   <%= dict_tipo[@tournament.tipo] %>
 </p>
 
+<p>
+  <strong>Participantes:</strong>
+  <% @tournament.teams.each do |team| %>
+    <br>
+    <%= team.nombre %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
 <%= link_to 'Back', tournaments_path %>
