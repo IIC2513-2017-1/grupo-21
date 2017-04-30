@@ -17,4 +17,6 @@
 class Match < ApplicationRecord
   belongs_to :tournament
 
+  belongs_to :equipo_local, :class_name => 'User'
+  belongs_to :equipo_visita, :class_name => 'User'
 end

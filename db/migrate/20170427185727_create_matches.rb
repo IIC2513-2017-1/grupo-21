@@ -7,6 +7,8 @@ class CreateMatches < ActiveRecord::Migration[5.0]
       t.boolean :penales
       t.integer :penales_local
       t.integer :penales_visita
+      t.references :equipo_local
+      t.references :equipo_visita
 
       t.timestamps
     end

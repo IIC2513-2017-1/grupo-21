@@ -17,6 +17,13 @@
 
 class Player < ApplicationRecord
   belongs_to :team
-  validates :nombre, presence: true
+  
+  validates :nombre, presence: true, allow_blank: false, format: /\A([a-zA-Z']\S*)\z/
+  validates :apellido, presence: true, allow_blank: false, format: /\A([a-zA-Z']\S*)\z/
+  # el formato es para validar que solo tenga caracteres, no numeros, espacios ni caracteres especiales, salvo el apostrofe
   validates :pais, presence: true, allow_blank: false
+  validates :team_id, presence: true, allow_blank: false
+  validates :edad, presence: true, allow_blank: false
+  validates_inclusion_of :edad, :in => 5..65
+  # esto valida que los jugadores tengan entre 5 y 65 años. Decidí que 5 es una edad mínima correcta para participar.
 end

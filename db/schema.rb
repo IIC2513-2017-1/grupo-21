@@ -22,9 +22,13 @@ ActiveRecord::Schema.define(version: 20170430052236) do
     t.boolean  "penales"
     t.integer  "penales_local"
     t.integer  "penales_visita"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "equipo_local_id"
+    t.integer  "equipo_visita_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "tournament_id"
+    t.index ["equipo_local_id"], name: "index_matches_on_equipo_local_id", using: :btree
+    t.index ["equipo_visita_id"], name: "index_matches_on_equipo_visita_id", using: :btree
     t.index ["tournament_id"], name: "index_matches_on_tournament_id", using: :btree
   end
 

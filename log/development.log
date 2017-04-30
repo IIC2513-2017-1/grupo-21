@@ -7761,3 +7761,1411 @@ Processing by PlayersController#new as HTML
 Completed 200 OK in 1853ms (Views: 1820.4ms | ActiveRecord: 14.8ms)
 
 
+Started GET "/players" for ::1 at 2017-04-30 17:45:55 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#index as HTML
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/player.rb:20:in `<class:Player>'
+app/models/player.rb:18:in `<top (required)>'
+app/controllers/players_controller.rb:7:in `index'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
+Started GET "/players" for ::1 at 2017-04-30 17:47:58 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (2.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 1956ms (Views: 1901.8ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 17:48:15 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (2.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (1372.1ms)
+  Rendered players/new.html.erb within layouts/application (1375.1ms)
+Completed 200 OK in 1470ms (Views: 1429.2ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:48:32 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/28zeIdcWwmDKpRFo7HGC7nDzQ1aGL0DtMBYyOXmu/Tf6hFwJFJfA3sZnH/0ZOVY8KmxeEBAEBb83ylvQDpo+g==", "player"=>{"nombre"=>"xxd-__", "apellido"=>"asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (51.9ms)
+  Rendered players/new.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 187ms (Views: 110.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:48:44 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZaWK4jx021exOFL4IA1TmUw3XU0KThre7TyzLSESjAid7eejt4XFtj60uO+o/0QVrCoLm7QpPzOsxX8oajTsGg==", "player"=>{"nombre"=>"xxdasda", "apellido"=>"asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (53.9ms)
+  Rendered players/new.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 111ms (Views: 95.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:48:49 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MoqVdbqJEdvwYtVXZxnCF+D7FvaxtgvSImp4TaPJoTbKwvg0MXgPOn/uP0Dv69WbAOZAIA/RLj9jk7RI6O/BJA==", "player"=>{"nombre"=>"Xxdasda", "apellido"=>"asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (48.5ms)
+  Rendered players/new.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 107ms (Views: 100.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:48:55 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tChVFmZZRQFkq2KxRXPXUy+SDehXk1u5rGoTc5p9WspMYDhX7ahb4OsniKbNgcDfz49bPun0flTtk9920Vs62A==", "player"=>{"nombre"=>"Xxdasda", "apellido"=>"Asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (48.2ms)
+  Rendered players/new.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 97ms (Views: 87.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:49:00 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g4Sn50BMFHq+8cbagdY65BOrWEObXnVr2C2W0yfKvHx7zMqmy70KmzF9LM0JJC1o87YOlSU5UIaZ1FrWbOzcbg==", "player"=>{"nombre"=>"XxdasdaXd", "apellido"=>"Asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (48.8ms)
+  Rendered players/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 95ms (Views: 90.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:49:05 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YI2/bWjuVVHXwO/wSKIpi9kXTfAVagtT4rx7TTSijZ+YxdIs4x9LsFhMBefAUD4HOQobJqsNLr6jRbdIf4TtjQ==", "player"=>{"nombre"=>"Juian", "apellido"=>"Asd", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (47.5ms)
+  Rendered players/new.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 115ms (Views: 107.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 17:49:09 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cRlzDzNiJFkRL5Xjt4xgjrueqjJEk5CpooELDKDVhq+JUR5OuJM6uJ6jf/Q/fncCW4P85Pr0tUTjeMcJ6/PmvQ==", "player"=>{"nombre"=>"Juian", "apellido"=>"Piter", "pais"=>"AX", "edad"=>"9", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (45.6ms)
+  Rendered players/new.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 18:50:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#index as HTML
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/models/player.rb:20: syntax error, unexpected $undefined
+lank: false, format: ([A-z])*\w
+                              ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/models/player.rb:21: syntax error, unexpected $undefined
+lank: false, format: ([A-z])*\w
+                              ^):
+  
+app/models/player.rb:20: syntax error, unexpected $undefined
+app/models/player.rb:21: syntax error, unexpected $undefined
+app/controllers/players_controller.rb:7:in `index'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (189.7ms)
+Started GET "/players" for ::1 at 2017-04-30 18:52:34 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (2.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 1534ms (Views: 1447.5ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 18:52:50 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (2224.5ms)
+  Rendered players/new.html.erb within layouts/application (2240.5ms)
+Completed 200 OK in 2326ms (Views: 2287.5ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 18:53:03 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gY4f1WanjIZhZE0YYc13kdJGpnfW+Rv4Hy/Lbq4ir/+hCz3dxamIjJlXRSI2GFTCmyzaAsyhtu1XMLrJC/588Q==", "player"=>{"nombre"=>"asdasd", "apellido"=>"asdasd", "pais"=>"AL", "edad"=>"3", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (50.1ms)
+  Rendered players/new.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 148ms (Views: 91.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 18:53:13 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHVyh7mNVVjVzeY6eLX4brZiA6aYapT7KAfbf2Qse0KgPR/GMnxLuVpBDC3wR+/iVn9VcCYNsRZp/hd6LwobUA==", "player"=>{"nombre"=>"asdasd@uc.cl", "apellido"=>"asdasd@uc.ck", "pais"=>"AL", "edad"=>"3", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (18.4ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "asdasd@uc.cl"], ["apellido", "asdasd@uc.ck"], ["pais", "AL"], ["edad", 3], ["created_at", 2017-04-30 21:53:13 UTC], ["updated_at", 2017-04-30 21:53:13 UTC], ["team_id", 1]]
+  [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/71
+Completed 302 Found in 64ms (ActiveRecord: 55.5ms)
+
+
+Started GET "/players/71" for ::1 at 2017-04-30 18:53:13 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62ms (Views: 43.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 18:58:25 -0300
+Processing by PlayersController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+  
+app/models/player.rb:20:in `<class:Player>'
+app/models/player.rb:18:in `<top (required)>'
+app/controllers/players_controller.rb:7:in `index'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.0ms)
+Started GET "/players" for ::1 at 2017-04-30 18:59:17 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 455ms (Views: 434.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 18:59:20 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (106.2ms)
+  Rendered players/new.html.erb within layouts/application (110.8ms)
+Completed 200 OK in 182ms (Views: 153.4ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 18:59:39 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ZQoIbv0bcgnjOjrOimq23mAq561dokMRyOCjpFsNG7xEQopGPppwt+/4NFt/ImIMOrX668uJBkPPPMpNLDnYA==", "player"=>{"nombre"=>"juanito", "apellido"=>"asdasd piuter", "pais"=>"DZ", "edad"=>"4", "team_id"=>"2"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "juanito"], ["apellido", "asdasd piuter"], ["pais", "DZ"], ["edad", 4], ["created_at", 2017-04-30 21:59:39 UTC], ["updated_at", 2017-04-30 21:59:39 UTC], ["team_id", 2]]
+  [1m[35m (35.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/72
+Completed 302 Found in 52ms (ActiveRecord: 38.8ms)
+
+
+Started GET "/players/72" for ::1 at 2017-04-30 18:59:39 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 40.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 18:59:45 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 72ms (Views: 58.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 18:59:48 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (55.8ms)
+  Rendered players/new.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 120ms (Views: 103.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 18:59:57 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Xlq1tES+ZUISQ8YHJD6M4OCXgR5oH9ROjztByFgdsnB/Ejechz9n/B6ByJLRdlgyugicWP40kRyI5yghLylxw==", "player"=>{"nombre"=>"asda123123", "apellido"=>"asdasdasdd", "pais"=>"AL", "edad"=>"123", "team_id"=>"3"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "asda123123"], ["apellido", "asdasdasdd"], ["pais", "AL"], ["edad", 123], ["created_at", 2017-04-30 21:59:57 UTC], ["updated_at", 2017-04-30 21:59:57 UTC], ["team_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/73
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/players/73" for ::1 at 2017-04-30 18:59:57 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 77ms (Views: 53.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 18:59:59 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 70ms (Views: 63.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 19:00:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (1488.7ms)
+  Rendered players/new.html.erb within layouts/application (1494.5ms)
+Completed 200 OK in 3140ms (Views: 3001.3ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:00:39 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BXmUR1qTTVroB2ZTDWj2T/x51kj2yQMtL5GwGNoYaAAl/LZP+Z1JUBA0bmlavdUctROqPeyRrjhnjsG/f8S7Dg==", "player"=>{"nombre"=>"123", "apellido"=>"asd", "pais"=>"AD", "edad"=>"22", "team_id"=>"4"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (27.4ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "123"], ["apellido", "asd"], ["pais", "AD"], ["edad", 22], ["created_at", 2017-04-30 22:00:40 UTC], ["updated_at", 2017-04-30 22:00:40 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/74
+Completed 302 Found in 120ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/players/74" for ::1 at 2017-04-30 19:00:40 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 79ms (Views: 47.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:00:42 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 97ms (Views: 62.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/players/71" for ::1 at 2017-04-30 19:01:00 -0300
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C6H7EdefY1RaYJRT7pxgFx6Ge/+9luh0q/CC2QyEsI/z6ZZQXG59tdXsfkRmbneb/pstKQPxzZnqCU7cR6LQnQ==", "id"=>"71"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/models/player.rb:20: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+ format: /\A[a-zA-Z\d\s]*\z/ }
+                              ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/models/player.rb:21: syntax error, unexpected '}', expecting keyword_end
+ format: /\A[a-zA-Z\d\s]*\z/ }
+                              ^):
+  
+app/models/player.rb:20: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+app/models/player.rb:21: syntax error, unexpected '}', expecting keyword_end
+app/controllers/players_controller.rb:67:in `set_player'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.2ms)
+Started DELETE "/players/71" for ::1 at 2017-04-30 19:01:24 -0300
+Processing by PlayersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C6H7EdefY1RaYJRT7pxgFx6Ge/+9luh0q/CC2QyEsI/z6ZZQXG59tdXsfkRmbneb/pstKQPxzZnqCU7cR6LQnQ==", "id"=>"71"}
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = $1[0m  [["id", 71]]
+  [1m[35m (58.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players
+Completed 302 Found in 96ms (ActiveRecord: 61.4ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:01:24 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 164ms (Views: 159.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 19:01:29 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (70.0ms)
+  Rendered players/new.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 126ms (Views: 109.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:01:38 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o2XO+qFh/JNqtt/yq43ZTaVfF6xiXYB2LP9lMfxFK2SD4OzyAm/4mZKF18j8WPoe7DVr2XgFLWNk4BSWWZn4ag==", "player"=>{"nombre"=>"123", "apellido"=>"123123", "pais"=>"DZ", "edad"=>"33", "team_id"=>"3"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "123"], ["apellido", "123123"], ["pais", "DZ"], ["edad", 33], ["created_at", 2017-04-30 22:01:38 UTC], ["updated_at", 2017-04-30 22:01:38 UTC], ["team_id", 3]]
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/75
+Completed 302 Found in 48ms (ActiveRecord: 39.6ms)
+
+
+Started GET "/players/75" for ::1 at 2017-04-30 19:01:38 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 63ms (Views: 44.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:01:40 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 81ms (Views: 76.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:02:58 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 293ms (Views: 273.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/players/new" for ::1 at 2017-04-30 19:03:00 -0300
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (153.4ms)
+  Rendered players/new.html.erb within layouts/application (156.1ms)
+Completed 200 OK in 249ms (Views: 198.2ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:03:09 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+pu34PQaaEdDifCrlnUBB/oK0lgrlmbxo+s1FDxitZbaHpXoVxRsTbu6+JHBoCJUs2CuLTHOy+Tr9ESzmb5mmA==", "player"=>{"nombre"=>"123", "apellido"=>"123", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (54.8ms)
+  Rendered players/new.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 117ms (Views: 101.2ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:03:15 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tDME61vaLs2lxwpxplaUI4dWrSwGIXHRS8fgBDNYCApMe2mq0CswLCpL4GYupIOvZ0v7+rhGVDwKPiwBeH5oGA==", "player"=>{"nombre"=>"holaaaa2", "apellido"=>"123", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (43.9ms)
+  Rendered players/new.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 101ms (Views: 85.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:03:18 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JozUFOg1eA/wEPjbh/KqZ1+ONFGlJO3DotyR7cZuJOrexLlVY8Rm7n+cEswPAL3rv5NihxtDyC7jJV3ojUhE+A==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"123", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (58.2ms)
+  Rendered players/new.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 104ms (Views: 98.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/players" for ::1 at 2017-04-30 19:03:25 -0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gdi72RjEAkRdY13XAhxbhGBjvE0Ci7QbVVd61skr2D15kNaYkzUcpdLvt8CK7kwIgH7qm7zskfYUrrbTgg24Lw==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"piter???", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "holaaaa"], ["apellido", "piter???"], ["pais", "AX"], ["edad", 6], ["created_at", 2017-04-30 22:03:25 UTC], ["updated_at", 2017-04-30 22:03:25 UTC], ["team_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/76
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/players/76" for ::1 at 2017-04-30 19:03:25 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 116ms (Views: 42.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:03:28 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 93ms (Views: 67.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/76/edit" for ::1 at 2017-04-30 19:04:17 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (89.3ms)
+  Rendered players/edit.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 452ms (Views: 374.3ms | ActiveRecord: 11.9ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:04:22 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FNEB5xxBd3OH3XWG8/unKmIi3336qHNvsy71cIYmnuyRSO01NksyOXDhgFEyQtYQEP0vSAbaS77eTot6drVJEA==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"piter sadalsd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (57.4ms)
+  Rendered players/edit.html.erb within layouts/application (60.2ms)
+Completed 200 OK in 112ms (Views: 97.6ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:04:27 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgzEZIUNozdvupDO/dzf7loSmR0oAM5z1zqztIDdnh3KRKklDvy91uA2etl1Lshiug/Py5Zn656Ww3+xy/v+Dw==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"piter sadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (50.8ms)
+  Rendered players/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 102ms (Views: 95.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:04:30 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5w5RQrlZ+u3HlVKZxkvRmGhEJFVeIZSbl+xZo2eo4lAfRjwDMqjkDEgZuI5OucYUiFlyg+BGsXbWFZWmLI6CQg==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"pitersadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (12.7ms)[0m  [1m[33mUPDATE "players" SET "apellido" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["apellido", "pitersadalsdxDDd"], ["updated_at", 2017-04-30 22:04:30 UTC], ["id", 76]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/76
+Completed 302 Found in 60ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/players/76" for ::1 at 2017-04-30 19:04:31 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 77ms (Views: 50.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/76/edit" for ::1 at 2017-04-30 19:07:19 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (4.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (212.0ms)
+  Rendered players/edit.html.erb within layouts/application (216.1ms)
+Completed 200 OK in 654ms (Views: 603.1ms | ActiveRecord: 5.1ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:07:23 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6PaTkkP8D/zDe/eUEO4T72AJiGilNDUyDdAXQUFN/x5tb39AafZKtjRHAkPRV2LVEtZ4XVlGDeNgsGlLsd4o4g==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"?pitersadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (1.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (48.5ms)
+  Rendered players/edit.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 98ms (Views: 83.6ms | ActiveRecord: 2.9ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:07:28 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rGREljihEY8YMhLeWBx6CNaptx+JGotfdhA1Nf3Cj5xULCnXs1APbpe++MnQ7m2ENrThyTd9rrI36fkwtuTvjg==", "player"=>{"nombre"=>"holaaaa", "apellido"=>".pitersadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (43.0ms)
+  Rendered players/edit.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 98ms (Views: 86.6ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:07:32 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bhgrfKrU2t9lwzdl3aS6oTqXk2gZRD/+iNqrBpfHpLKWUEY9ISXEPupP3XJVVq0t2orFvqcjGhPJI2cD3OHEoA==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"'pitersadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (50.0ms)
+  Rendered players/edit.html.erb within layouts/application (52.7ms)
+Completed 200 OK in 98ms (Views: 90.4ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:07:48 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Qe6q+nNXrj4BfugeUPgwT6yXZyHjwe4KFwgQHVJ8TYpT9fqYjxAWXeJEbfxsfdN3q8LSjnoIlVppexFPm+RJA==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"'pitersadalsdxDDd", "pais"=>"AX", "edad"=>"6", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "players" SET "apellido" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["apellido", "'pitersadalsdxDDd"], ["updated_at", 2017-04-30 22:07:48 UTC], ["id", 76]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/76
+Completed 302 Found in 80ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/players/76" for ::1 at 2017-04-30 19:07:48 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players" for ::1 at 2017-04-30 19:07:51 -0300
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  Rendered players/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 279ms (Views: 63.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/76/edit" for ::1 at 2017-04-30 19:11:44 -0300
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (175.1ms)
+  Rendered players/edit.html.erb within layouts/application (179.8ms)
+Completed 200 OK in 503ms (Views: 457.8ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:11:48 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jy/5O4R7pYnqAGWIdFjHyQaV9xGQwlPCGW4ImRfkqzCithXprnHgwx08kF+14bbzdEoHJGywaxN0DnaT53d8zA==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"'pitersadalsdxDDd", "pais"=>"AX", "edad"=>"0", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (57.0ms)
+  Rendered players/edit.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 107ms (Views: 92.5ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:11:55 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jlVfWPXIg/VlYeYG6lj3rIoJHLNMXiuYRpi4ZnzScwp2HTIZfjmdFOrtDBFiquAgahRKZfI5DnUHYXRjN/QTGA==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"'pitersadalsdxDDd", "pais"=>"AX", "edad"=>"66", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (53.0ms)
+  Rendered players/edit.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 103ms (Views: 92.7ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/players/76" for ::1 at 2017-04-30 19:11:59 -0300
+Processing by PlayersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3F0o/tOrVfD0P4/QNMJQKYpKuQ3LYBQHhoDTIXCjkeUkFUW/WFpLEXuzZce8MEelalfv23UHMerHeR8kO4Xx9w==", "player"=>{"nombre"=>"holaaaa", "apellido"=>"'pitersadalsdxDDd", "pais"=>"AX", "edad"=>"64", "team_id"=>"1"}, "commit"=>"Update Player", "id"=>"76"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "players" SET "edad" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["edad", 64], ["updated_at", 2017-04-30 22:11:59 UTC], ["id", 76]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/players/76
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/players/76" for ::1 at 2017-04-30 19:11:59 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 67ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/teams" for ::1 at 2017-04-30 19:15:06 -0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"teams"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=teams):
+  
+app/controllers/players_controller.rb:67:in `set_player'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.2ms)
+Started GET "/teams" for ::1 at 2017-04-30 19:15:09 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 361ms (Views: 306.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/teams/new" for ::1 at 2017-04-30 19:15:18 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (3.2ms)
+  Rendered teams/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 148ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 19:15:21 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MQ8b1x8lsL6HOMx9WC0z7UICfJLJcjAichZ/zsgWBr1oGa5LOjnGnbaBbtFmlK30ZAWBlfYSh8EqKRkQdduVQ==", "team"=>{"nombre"=>"New Mexico spirits", "pais"=>"asd"}, "commit"=>"Create Team"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico spirits"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (2.4ms)
+  Rendered teams/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 287ms (Views: 47.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 19:15:31 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VHGdXg+w2DYtofKGd1iLxpnQl1jZbThE9moX0j+RtyesOfAfhEHG16ItGJH/qpxKec3BjmcKHam3k9vXdLfXNQ==", "team"=>{"nombre"=>"New Mexico spirit", "pais"=>"asd"}, "commit"=>"Create Team"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico spirit"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (2.3ms)
+  Rendered teams/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 69ms (Views: 60.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/teams" for ::1 at 2017-04-30 19:15:35 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 70ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/new" for ::1 at 2017-04-30 19:16:57 -0300
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (6.0ms)
+  Rendered teams/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 628ms (Views: 506.2ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 19:17:06 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J8wnOo84MSjBSS9pdt8F3I4G9cDXT/KmUIwhVaNkYGwyqH3s/6xA8E2PyePGJeOk6p7qNMuycHnd7NzO2ZNWIw==", "team"=>{"nombre"=>"New Mexico spirits", "pais"=>"chile"}, "commit"=>"Create Team"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (3.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico spirits"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (3.9ms)
+  Rendered teams/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 83ms (Views: 66.8ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 19:17:10 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRPfBVrX88Mttq7aJTTUo5V3dv9GCT4pdfU5tgvbvzGtW7JE0SbtIqI6RM2txsMvdWogKfhuG8Q0DPWzQP3fIw==", "team"=>{"nombre"=>"New Mexico spirit", "pais"=>"chile"}, "commit"=>"Create Team"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico spirit"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (4.2ms)
+  Rendered teams/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 97ms (Views: 91.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/teams" for ::1 at 2017-04-30 19:18:04 -0300
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"23WCzxhxlDtA3mE1lcSM7CvD/951SutuQP9bxCfaZCAjPe+Ok4CK2s9SiyIdNptgy96pCMstzoMBBpfBbPwEMg==", "team"=>{"nombre"=>"New Mexico spirit", "pais"=>"chile"}, "commit"=>"Create Team"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico spirit"], ["LIMIT", 1]]
+  [1m[35mSQL (33.3ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "New Mexico spirit"], ["pais", "chile"], ["created_at", 2017-04-30 22:18:05 UTC], ["updated_at", 2017-04-30 22:18:05 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/6
+Completed 302 Found in 147ms (ActiveRecord: 34.9ms)
+
+
+Started GET "/teams/6" for ::1 at 2017-04-30 19:18:05 -0300
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 6]]
+  Rendered teams/show.html.erb within layouts/application (130.4ms)
+Completed 200 OK in 495ms (Views: 468.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-04-30 19:18:07 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 93ms (Views: 73.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/teams/6" for ::1 at 2017-04-30 19:18:10 -0300
+Processing by TeamsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gSW9H47sp2naaclLI/RN2wB8hV1BOL+1DOBLS6x2aS95bdBeBR25iFXlI1yrBlpX4GHTi/9fmlhNGYdO51AJPQ==", "id"=>"6"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "teams_tournaments" WHERE "teams_tournaments"."team_id" = $1[0m  [["team_id", 6]]
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "teams" WHERE "teams"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams
+Completed 302 Found in 86ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/teams" for ::1 at 2017-04-30 19:18:10 -0300
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMatchToTeams (20170430222309)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.9ms)[0m  [1m[35mALTER TABLE "teams" ADD "equipo_local_id" integer[0m
+  [1m[35m (28.6ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_equipo_local_id" ON "teams"  ("equipo_local_id")[0m
+  [1m[35m (13.9ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_9c9e204b4e"
+FOREIGN KEY ("equipo_local_id")
+  REFERENCES "equipo_locals" ("id")
+[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMatchToTeam (20170430222559)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "teams" ADD "equipo_local_id" integer[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_equipo_local_id" ON "teams"  ("equipo_local_id")[0m
+  [1m[35m (14.9ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_9c9e204b4e"
+FOREIGN KEY ("equipo_local_id")
+  REFERENCES "equipo_locals" ("id")
+[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMatchToTeams (20170430222309)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "teams" ADD "equipo_local_id" integer[0m
+  [1m[35m (66.0ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_equipo_local_id" ON "teams"  ("equipo_local_id")[0m
+  [1m[35m (14.7ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_9c9e204b4e"
+FOREIGN KEY ("equipo_local_id")
+  REFERENCES "equipo_locals" ("id")
+[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMatchToTeam (20170430222559)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.5ms)[0m  [1m[35mALTER TABLE "equipo_local" ADD "match_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (227.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grupo21_development"[0m
+  [1m[35m (178.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "grupo21_test"[0m
+  [1m[35m (1770.3ms)[0m  [1m[35mCREATE DATABASE "grupo21_development" ENCODING = 'unicode'[0m
+  [1m[35m (376.3ms)[0m  [1m[35mCREATE DATABASE "grupo21_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlayers (20170427185450)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "players" ("id" serial primary key, "nombre" character varying, "apellido" character varying, "pais" character varying, "edad" integer, "dorsal" integer, "goles" integer, "asistencias" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427185450"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMatches (20170427185727)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "matches" ("id" serial primary key, "fecha" timestamp, "goles_local" integer, "goles_visita" integer, "penales" boolean, "penales_local" integer, "penales_visita" integer, "equipo_local_id" integer, "equipo_visita_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_matches_on_equipo_local_id" ON "matches"  ("equipo_local_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_matches_on_equipo_visita_id" ON "matches"  ("equipo_visita_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170427185727"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTournaments (20170430045529)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "tournaments" ("id" serial primary key, "nombre" character varying, "tipo" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430045529"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeams (20170430045622)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "nombre" character varying, "pais" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430045622"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTeamToPlayer (20170430050409)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "players" ADD "team_id" integer[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_players_on_team_id" ON "players"  ("team_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "players" ADD CONSTRAINT "fk_rails_8880a915a5"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430050409"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTournamentToMatch (20170430051448)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "matches" ADD "tournament_id" integer[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_matches_on_tournament_id" ON "matches"  ("tournament_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "matches" ADD CONSTRAINT "fk_rails_700eaa2935"
+FOREIGN KEY ("tournament_id")
+  REFERENCES "tournaments" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430051448"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20170430051925)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430051925"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTeamsTournaments (20170430052236)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "teams_tournaments" ("id" serial primary key, "tournament_id" integer, "team_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3d301bd494"
+FOREIGN KEY ("tournament_id")
+  REFERENCES "tournaments" ("id")
+, CONSTRAINT "fk_rails_e99239ef16"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_teams_tournaments_on_tournament_id" ON "teams_tournaments"  ("tournament_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_teams_tournaments_on_team_id" ON "teams_tournaments"  ("team_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170430052236"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-30 22:34:18 UTC], ["updated_at", 2017-04-30 22:34:18 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "Montana owls"], ["LIMIT", 1]]
+  [1m[35mSQL (16.8ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Montana owls"], ["pais", "Chile"], ["created_at", 2017-04-30 22:35:34 UTC], ["updated_at", 2017-04-30 22:35:34 UTC]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "New Mexico bees"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "New Mexico bees"], ["pais", "Chile"], ["created_at", 2017-04-30 22:35:34 UTC], ["updated_at", 2017-04-30 22:35:34 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "Iowa geese"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Iowa geese"], ["pais", "Chile"], ["created_at", 2017-04-30 22:35:34 UTC], ["updated_at", 2017-04-30 22:35:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "Georgia vampires"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Georgia vampires"], ["pais", "Chile"], ["created_at", 2017-04-30 22:35:34 UTC], ["updated_at", 2017-04-30 22:35:34 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "Louisiana penguins"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Louisiana penguins"], ["pais", "Chile"], ["created_at", 2017-04-30 22:35:34 UTC], ["updated_at", 2017-04-30 22:35:34 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (17.8ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jena"], ["apellido", "Wilkinson"], ["pais", "COL"], ["edad", 26], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jadyn"], ["apellido", "Ward"], ["pais", "HON"], ["edad", 30], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Trevor"], ["apellido", "Orn"], ["pais", "CRC"], ["edad", 31], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Herbert"], ["apellido", "Effertz"], ["pais", "PAN"], ["edad", 32], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Furman"], ["apellido", "Jenkins"], ["pais", "VEN"], ["edad", 22], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Carey"], ["apellido", "Herman"], ["pais", "PUR"], ["edad", 15], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Trudie"], ["apellido", "Russel"], ["pais", "GRN"], ["edad", 30], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Caitlyn"], ["apellido", "Beatty"], ["pais", "BAH"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Ernestine"], ["apellido", "Koepp"], ["pais", "NCA"], ["edad", 20], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Darius"], ["apellido", "Doyle"], ["pais", "HAI"], ["edad", 17], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Tobin"], ["apellido", "Schulist"], ["pais", "CAN"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Lilian"], ["apellido", "Armstrong"], ["pais", "HAI"], ["edad", 30], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Cathrine"], ["apellido", "Lubowitz"], ["pais", "BRA"], ["edad", 17], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jensen"], ["apellido", "Wilkinson"], ["pais", "URU"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Keira"], ["apellido", "Gutkowski"], ["pais", "BER"], ["edad", 29], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sandrine"], ["apellido", "Blanda"], ["pais", "ISV"], ["edad", 22], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jarrett"], ["apellido", "Armstrong"], ["pais", "PUR"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Julian"], ["apellido", "Senger"], ["pais", "MEX"], ["edad", 31], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jany"], ["apellido", "Schamberger"], ["pais", "DOM"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Geovanni"], ["apellido", "Rolfson"], ["pais", "CRC"], ["edad", 30], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Burley"], ["apellido", "Emmerich"], ["pais", "CHI"], ["edad", 31], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Rossie"], ["apellido", "Stanton"], ["pais", "DMA"], ["edad", 29], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Chelsie"], ["apellido", "Muller"], ["pais", "ESA"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Llewellyn"], ["apellido", "Aufderhar"], ["pais", "CHI"], ["edad", 32], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Palma"], ["apellido", "Muller"], ["pais", "CUB"], ["edad", 28], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sonny"], ["apellido", "Olson"], ["pais", "CHI"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jada"], ["apellido", "Berge"], ["pais", "BOL"], ["edad", 17], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Kaela"], ["apellido", "Mosciski"], ["pais", "ECU"], ["edad", 23], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Easton"], ["apellido", "Hickle"], ["pais", "ARG"], ["edad", 19], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sylvan"], ["apellido", "Collins"], ["pais", "CAN"], ["edad", 19], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Josie"], ["apellido", "Lakin"], ["pais", "ARU"], ["edad", 19], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Gayle"], ["apellido", "Batz"], ["pais", "VEN"], ["edad", 25], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sigurd"], ["apellido", "Gleason"], ["pais", "PAN"], ["edad", 29], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Isaac"], ["apellido", "Waters"], ["pais", "NCA"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jakob"], ["apellido", "Wilkinson"], ["pais", "CAY"], ["edad", 32], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Florencio"], ["apellido", "Considine"], ["pais", "BER"], ["edad", 15], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sheila"], ["apellido", "Volkman"], ["pais", "MEX"], ["edad", 23], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Karlie"], ["apellido", "Bechtelar"], ["pais", "ISV"], ["edad", 20], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Alex"], ["apellido", "Considine"], ["pais", "GUA"], ["edad", 16], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Amani"], ["apellido", "Krajcik"], ["pais", "GRN"], ["edad", 32], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "London"], ["apellido", "Legros"], ["pais", "USA"], ["edad", 29], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Mollie"], ["apellido", "O'Reilly"], ["pais", "CAY"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Clair"], ["apellido", "Crona"], ["pais", "ARU"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Arlo"], ["apellido", "Howell"], ["pais", "VEN"], ["edad", 19], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Krystina"], ["apellido", "Ullrich"], ["pais", "ANT"], ["edad", 16], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Darlene"], ["apellido", "Mayert"], ["pais", "CAN"], ["edad", 17], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Lesley"], ["apellido", "Ortiz"], ["pais", "HON"], ["edad", 29], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Aniya"], ["apellido", "Hudson"], ["pais", "VEN"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Jacynthe"], ["apellido", "Langworth"], ["pais", "PAR"], ["edad", 18], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Ressie"], ["apellido", "Swift"], ["pais", "NCA"], ["edad", 32], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Rylee"], ["apellido", "Nitzsche"], ["pais", "SUR"], ["edad", 18], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Lorenza"], ["apellido", "Volkman"], ["pais", "CAY"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Marie"], ["apellido", "Aufderhar"], ["pais", "VEN"], ["edad", 31], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Lucius"], ["apellido", "Kris"], ["pais", "ARG"], ["edad", 31], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Queenie"], ["apellido", "Effertz"], ["pais", "USA"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Kyler"], ["apellido", "Orn"], ["pais", "CUB"], ["edad", 26], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Sydnee"], ["apellido", "Homenick"], ["pais", "BIZ"], ["edad", 26], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Verdie"], ["apellido", "Ledner"], ["pais", "CRC"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Elenor"], ["apellido", "Fadel"], ["pais", "DOM"], ["edad", 22], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Marielle"], ["apellido", "Hane"], ["pais", "ARG"], ["edad", 27], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Adaline"], ["apellido", "Kshlerin"], ["pais", "PAN"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Ottilie"], ["apellido", "Kerluke"], ["pais", "GRN"], ["edad", 30], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Joel"], ["apellido", "Hegmann"], ["pais", "CUB"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Kiel"], ["apellido", "Bosco"], ["pais", "BER"], ["edad", 24], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Javon"], ["apellido", "Luettgen"], ["pais", "PAN"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Freda"], ["apellido", "Rolfson"], ["pais", "CHI"], ["edad", 21], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Autumn"], ["apellido", "Wolf"], ["pais", "SKN"], ["edad", 21], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Kavon"], ["apellido", "Boyle"], ["pais", "SUR"], ["edad", 33], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Brandt"], ["apellido", "Runolfsdottir"], ["pais", "VEN"], ["edad", 17], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "Eldon"], ["apellido", "Powlowski"], ["pais", "PAR"], ["edad", 34], ["created_at", 2017-04-30 22:35:35 UTC], ["updated_at", 2017-04-30 22:35:35 UTC], ["team_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMatch Load (1.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/matches" for ::1 at 2017-04-30 19:38:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (1.0ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 1288ms (Views: 1222.9ms | ActiveRecord: 3.0ms)
+
+
