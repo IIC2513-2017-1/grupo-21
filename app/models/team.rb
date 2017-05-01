@@ -1,7 +1,7 @@
 class Team < ApplicationRecord
-  has_many :players
+  has_many :players, dependent: :destroy
   has_and_belongs_to_many :tournaments
-  
+
   has_many :matches, :class_name => 'Match', :foreign_key => 'equipo_local_id'
   has_many :matches, :class_name => 'Match', :foreign_key => 'equipo_visita_id'
 
