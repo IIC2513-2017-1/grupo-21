@@ -19,4 +19,8 @@ class Match < ApplicationRecord
 
   belongs_to :equipo_local, :class_name => 'Team'
   belongs_to :equipo_visita, :class_name => 'Team'
+
+  validates :fecha, presence: true, allow_blank: false
+  validates :equipo_local, presence: true, allow_blank: false
+  validates :equipo_visita, presence: true, allow_blank: false
 end

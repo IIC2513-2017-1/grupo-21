@@ -25,9 +25,13 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     @match = Match.new(match_params)
-
+    ids = Tournament.find_by_id(@match.tournament_id).team_ids
     respond_to do |format|
-      if @match.save
+      if @match.equipo_visita_id == @match.equipo_local_id
+        format.html { redirect_to new_match_path, notice: 'El equipo local no puede ser el mismo que el equipo visita.' }
+      elsif !(ids.include? @match.equipo_visita_id and ids.include? @match.equipo_local_id)
+        format.html { redirect_to new_match_path, notice: 'Ambos equipos deben estar inscritos en el campeonato' }
+      elsif @match.save
         format.html { redirect_to @match, notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else
@@ -40,8 +44,14 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
+    ids = Tournament.find_by_id(@match.tournament_id).team_ids
+    new_params = match_params
     respond_to do |format|
-      if @match.update(match_params)
+      if new_params[:equipo_visita_id] == new_params[:equipo_local_id]
+        format.html { redirect_to edit_match_path(@match), notice: 'El equipo local no puede ser el mismo que el equipo visita.' }
+      elsif !(ids.include? new_params[:equipo_local_id]and ids.include? new_params[:equipo_visita_id])
+        format.html { redirect_to edit_match_path(@match), notice: 'Ambos equipos deben estar inscritos en el campeonato' }
+      elsif @match.update(match_params)
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
@@ -69,6 +79,6 @@ class MatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
-      params.require(:match).permit(:fecha, :goles_local, :goles_visita, :penales, :penales_local, :penales_visita)
+      params.require(:match).permit(:fecha, :tournament_id, :equipo_local_id, :equipo_visita_id)
     end
 end

@@ -1,34 +1,25 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Campeonato: (ID - Nombre)</strong>
+  <%= @match.tournament_id.to_s + " - " + Tournament.find_by_id(@match.tournament_id).nombre %>
+</p>
+
 <p>
   <strong>Fecha:</strong>
   <%= @match.fecha %>
 </p>
 
 <p>
-  <strong>Goles local:</strong>
-  <%= @match.goles_local %>
+  <strong>Equipo Local: (ID - Nombre)</strong>
+  <%= @match.equipo_local_id.to_s + " - " + Team.find_by_id(@match.equipo_local_id).nombre %>
 </p>
 
 <p>
-  <strong>Goles visita:</strong>
-  <%= @match.goles_visita %>
+  <strong>Equipo Vista: (ID - Nombre)</strong>
+  <%= @match.equipo_visita_id.to_s + " - " + Team.find_by_id(@match.equipo_visita_id).nombre %>
 </p>
 
-<p>
-  <strong>Penales:</strong>
-  <%= @match.penales %>
-</p>
-
-<p>
-  <strong>Penales local:</strong>
-  <%= @match.penales_local %>
-</p>
-
-<p>
-  <strong>Penales visita:</strong>
-  <%= @match.penales_visita %>
-</p>
-
-<%= link_to 'Edit', edit_match_path(@match) %> |
-<%= link_to 'Back', matches_path %>
+<%= link_to 'Editar', edit_match_path(@match) %> |
+<%= link_to 'Volver', matches_path %>

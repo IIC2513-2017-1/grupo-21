@@ -17,31 +17,21 @@
   </div>
 
   <div class="field">
-    <%= f.label :goles_local %>
-    <%= f.number_field :goles_local %>
+    <%= f.label :tournament_id, 'Campeonato' %>
+    <%= f.select :tournament_id, Tournament.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Selecciona el campeonato' }, { required: true } %>
   </div>
 
   <div class="field">
-    <%= f.label :goles_visita %>
-    <%= f.number_field :goles_visita %>
+    <%= f.label :equipo_local_id %>
+    <%= f.select :equipo_local_id, Team.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Local' }, { required: true } %>
   </div>
 
   <div class="field">
-    <%= f.label :penales %>
-    <%= f.check_box :penales %>
-  </div>
-
-  <div class="field">
-    <%= f.label :penales_local %>
-    <%= f.number_field :penales_local %>
-  </div>
-
-  <div class="field">
-    <%= f.label :penales_visita %>
-    <%= f.number_field :penales_visita %>
+    <%= f.label :equipo_visita_id %>
+    <%= f.select :equipo_visita_id, Team.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Visita' }, { required: true } %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Crear Partido' %>
   </div>
 <% end %>

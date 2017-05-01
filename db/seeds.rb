@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Team.delete_all
+Player.delete_all
+
 equipos = []
 5.times do |j|
   equipos << Team.create(nombre: Faker::Team.name, pais: "Chile")
