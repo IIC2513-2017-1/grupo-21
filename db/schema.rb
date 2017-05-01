@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20170430052236) do
   enable_extension "plpgsql"
 
   create_table "matches", force: :cascade do |t|
-    t.datetime "fecha"
+    t.datetime "fecha",            null: false
     t.integer  "goles_local"
     t.integer  "goles_visita"
     t.boolean  "penales"
     t.integer  "penales_local"
     t.integer  "penales_visita"
-    t.integer  "equipo_local_id"
-    t.integer  "equipo_visita_id"
+    t.integer  "equipo_local_id",  null: false
+    t.integer  "equipo_visita_id", null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "tournament_id"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20170430052236) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
-    t.string   "pais"
+    t.string   "nombre",      null: false
+    t.string   "apellido",    null: false
+    t.string   "pais",        null: false
     t.integer  "edad"
     t.integer  "dorsal"
     t.integer  "goles"
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20170430052236) do
   end
 
   create_table "teams", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "pais"
+    t.string   "nombre",     null: false
+    t.string   "pais",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,17 +63,17 @@ ActiveRecord::Schema.define(version: 20170430052236) do
   end
 
   create_table "tournaments", force: :cascade do |t|
-    t.string   "nombre"
-    t.integer  "tipo"
+    t.string   "nombre",     null: false
+    t.integer  "tipo",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
+    t.string   "email",      null: false
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "password"
+    t.string   "password",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

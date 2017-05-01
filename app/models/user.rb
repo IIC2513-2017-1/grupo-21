@@ -17,6 +17,10 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, allow_blank: false,
                     format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
-  validates :first_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']\S*)\z/
-  validates :last_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']\S*)\z/
+  validates :first_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']*)\z/
+  validates :last_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']*)\z/
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

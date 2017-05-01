@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Grupo21</title>
+    <title>Organiza2</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,18 @@
   </head>
 
   <body>
+    <header>
+      <div id="logo">
+        <%= link_to "Organiza2", root_path  %>
+      </div>
+      <nav id="main-menu">
+        <%= link_to 'Campeonatos', tournaments_path %>
+        <%= link_to 'Partidos', matches_path %>
+        <%= link_to 'Equipos', teams_path %>
+        <%= link_to 'Jugadores', players_path %>
+        <%= link_to 'Usuarios', users_path %>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

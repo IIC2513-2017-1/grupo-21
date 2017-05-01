@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Players</h1>
+<h1>Jugadores</h1>
 
 <table>
   <thead>
@@ -9,7 +9,7 @@
       <th>Apellido</th>
       <th>Nacionalidad</th>
       <th>Edad</th>
-      <th>ID equipo</th>
+      <th>Equipo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,10 +21,10 @@
         <td><%= player.apellido %></td>
         <td><%= player.pais %></td>
         <td><%= player.edad %></td>
-        <td><%= player.team_id %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= Team.find_by_id(player.team_id).nombre %></td>
+        <td><%= link_to 'Mostrar información', player %></td>
+        <td><%= link_to 'Editar', edit_player_path(player) %></td>
+        <td><%= link_to 'Borrar', player, method: :delete, data: { confirm: 'Estás seguro∫?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'Nuevo jugador', new_player_path %>

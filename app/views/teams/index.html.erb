@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<h1>Equipos</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= team.nombre %></td>
         <td><%= team.pais %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar información', team %></td>
+        <td><%= link_to 'Editar', edit_team_path(team) %></td>
+        <td><%= link_to 'Borrar', team, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+<%= link_to 'Nuevo equipo', new_team_path %>

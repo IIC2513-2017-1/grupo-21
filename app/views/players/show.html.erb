@@ -21,10 +21,10 @@
 </p>
 
 <p>
-  <strong>Equipo:</strong>
-  <%= Team.find_by_id(@player.team_id).nombre %>
+  <strong>Equipo: (ID - nombre)</strong>
+  <%= @player.team_id.to_s + " - " + Team.find_by_id(@player.team_id).nombre %>
 </p>
 
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+<%= link_to 'Editar', edit_player_path(@player) %> |
+<%= link_to 'Volver', players_path %>
