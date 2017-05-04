@@ -23,4 +23,10 @@ class Match < ApplicationRecord
   validates :fecha, presence: true, allow_blank: false
   validates :equipo_local, presence: true, allow_blank: false
   validates :equipo_visita, presence: true, allow_blank: false
+  # validate :nombre_metodo, ejecutará el método con ese nombre, el cual,
+  # estará definido en el modelo. Las cosas de lógica por lo general deberían estar
+  # en el modelo.
+  # def nombre_metodo
+  #   self.atributo: es un atributo que fue creado con los params entregados por el form
+  # end
 end

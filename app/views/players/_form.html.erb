@@ -31,6 +31,7 @@
     <%= f.number_field :edad, :required => true %>
   </div>
 
+
   <div class="field">
     <%= f.label :team_id, "Equipo" %>
     <%= f.select :team_id, Team.all.collect { |team| [ team.nombre, team.id ] }, { include_blank: 'Selecciona el equipo' }, { required: true } %>

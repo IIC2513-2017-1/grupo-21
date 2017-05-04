@@ -17835,3 +17835,14 @@ FOREIGN KEY ("team_id")
   [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fabian_schmidt@kling.io"], ["LIMIT", 1]]
   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "fabian_schmidt@kling.io"], ["first_name", "Lowell"], ["last_name", "Parisian"], ["password", "3mZsZh57WlDvY"], ["created_at", 2017-05-01 02:34:40 UTC], ["updated_at", 2017-05-01 02:34:40 UTC]]
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTournament Load (89.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (117.0ms)[0m  [1m[32mINSERT INTO "tournaments" ("nombre", "tipo", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "chile 2017"], ["tipo", 2], ["created_at", 2017-05-02 18:04:30 UTC], ["updated_at", 2017-05-02 18:04:30 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTournament Load (10.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" ORDER BY "tournaments"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (72.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTeam Exists (76.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."nombre" = $1 LIMIT $2[0m  [["nombre", "cholocholo"], ["LIMIT", 1]]
+  [1m[35mSQL (51.3ms)[0m  [1m[32mINSERT INTO "teams" ("nombre", "pais", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "cholocholo"], ["pais", "chile"], ["created_at", 2017-05-02 18:07:52 UTC], ["updated_at", 2017-05-02 18:07:52 UTC]]
+  [1m[35mSQL (132.3ms)[0m  [1m[32mINSERT INTO "teams_tournaments" ("tournament_id", "team_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tournament_id", 1], ["team_id", 6], ["created_at", 2017-05-02 18:07:52 UTC], ["updated_at", 2017-05-02 18:07:52 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
