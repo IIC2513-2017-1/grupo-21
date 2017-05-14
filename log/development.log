@@ -22393,3 +22393,816 @@ Processing by MatchesController#index as HTML
 Completed 200 OK in 68ms (Views: 62.0ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/tournaments" for ::1 at 2017-05-14 01:36:53 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 4303ms (Views: 4245.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/players" for ::1 at 2017-05-14 01:46:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/players"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (31.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (206.2ms)
+Started GET "/players/new" for ::1 at 2017-05-14 01:46:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/players/new"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (23.5ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (188.5ms)
+Started GET "/" for ::1 at 2017-05-14 01:53:04 -0400
+Started GET "/players" for ::1 at 2017-05-14 01:53:04 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (161.2ms)
+Completed 500 Internal Server Error in 1761ms (ActiveRecord: 62.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_path' for #<#<Class:0x007fd143dbfd78>:0x007fd143dbe900>):
+    16:       <nav id="main-menu">
+    17:         <%= link_to 'Campeonatos', tournaments_path, class: "button" %>
+    18:         <%= link_to 'Equipos', teams_path, class: "button" %>
+    19:         <%= link_to 'Jugadores', players_path, class: "button" %>
+    20:       </nav>
+    21:       <div>
+    22:         <% if current_user %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__581472399800629874_70268434068420'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (165.8ms)
+  
+ActionController::RoutingError (No route matches [GET] "/players"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (14.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (185.5ms)
+Started GET "/" for ::1 at 2017-05-14 01:53:18 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (63.1ms)
+Completed 500 Internal Server Error in 573ms (ActiveRecord: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `players_path' for #<#<Class:0x007fd148971668>:0x007fd148969da0>):
+    16:       <nav id="main-menu">
+    17:         <%= link_to 'Campeonatos', tournaments_path, class: "button" %>
+    18:         <%= link_to 'Equipos', teams_path, class: "button" %>
+    19:         <%= link_to 'Jugadores', players_path, class: "button" %>
+    20:       </nav>
+    21:       <div>
+    22:         <% if current_user %>
+  
+app/views/layouts/application.html.erb:19:in `_app_views_layouts_application_html_erb__581472399800629874_70268380923780'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.8ms)
+Started GET "/" for ::1 at 2017-05-14 01:55:18 -0400
+  
+NameError (undefined local variable or method `players_path' for #<ActionDispatch::Routing::Mapper:0x007fd14a121718>):
+  
+config/routes.rb:9:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (158.8ms)
+Started GET "/" for ::1 at 2017-05-14 01:56:51 -0400
+  
+NameError (undefined local variable or method `players' for #<ActionDispatch::Routing::Mapper:0x007fd14678a5e0>):
+  
+config/routes.rb:9:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (188.4ms)
+Started GET "/" for ::1 at 2017-05-14 01:57:07 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (105.9ms)
+Completed 200 OK in 1141ms (Views: 1026.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/players" for ::1 at 2017-05-14 01:57:12 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=):
+  
+app/controllers/players_controller.rb:7:in `index'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.3ms)
+Started GET "/players" for ::1 at 2017-05-14 01:58:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/players"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (27.9ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (288.3ms)
+Started GET "/" for ::1 at 2017-05-14 01:58:13 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (88.4ms)
+Completed 200 OK in 1150ms (Views: 1040.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 01:58:16 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 113ms (Views: 106.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 01:58:20 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 130ms (Views: 52.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 01:58:23 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (162.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (218.4ms)
+Completed 200 OK in 288ms (Views: 101.1ms | ActiveRecord: 171.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 01:58:25 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 51.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 01:58:29 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (42.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 100ms (Views: 53.8ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:00:06 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 706ms (Views: 668.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:00:09 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 202ms (Views: 149.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 02:00:10 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 88ms (Views: 80.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:00:13 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `players' for #<Class:0x007fd148928d28>):
+  
+app/controllers/players_controller.rb:8:in `index'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.9ms)
+Started GET "/teams" for ::1 at 2017-05-14 02:01:19 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 1007ms (Views: 854.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:01:23 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 98ms (Views: 92.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 02:01:25 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (1.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 109ms (Views: 91.3ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:01:27 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 127ms (Views: 88.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams/1/players/10" for ::1 at 2017-05-14 02:01:32 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"10"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (168.9ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `team_matches_path' for #<#<Class:0x007fd143d966d0>:0x007fd149354cc0>
+Did you mean?  team_path):
+    26: 
+    27: 
+    28: <%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
+    29: <%= link_to 'Volver', team_matches_path(@team) %>
+  
+app/views/players/show.html.erb:29:in `_app_views_players_show_html_erb__3945366894051797532_70268426562580'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.4ms)
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:02:15 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 998ms (Views: 960.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams/1/players/13" for ::1 at 2017-05-14 02:02:18 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"13"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (176.6ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `team_matches_path' for #<#<Class:0x007fd143d966d0>:0x007fd148d08538>
+Did you mean?  team_path):
+    26: 
+    27: 
+    28: <%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
+    29: <%= link_to 'Volver', team_matches_path(@team.id) %>
+  
+app/views/players/show.html.erb:29:in `_app_views_players_show_html_erb__3945366894051797532_70268423260180'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.9ms)
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:02:56 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 819ms (Views: 793.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams/1/players/10" for ::1 at 2017-05-14 02:02:59 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"10"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (183.9ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `team_plaers_path' for #<#<Class:0x007fd143d966d0>:0x007fd14892a6a0>
+Did you mean?  team_players_path
+               team_player_path):
+    26: 
+    27: 
+    28: <%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
+    29: <%= link_to 'Volver', team_plaers_path(@team.id) %>
+  
+app/views/players/show.html.erb:29:in `_app_views_players_show_html_erb__3945366894051797532_70268421250460'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (164.8ms)
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:03:14 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 81ms (Views: 54.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/teams/1/players/7" for ::1 at 2017-05-14 02:03:16 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"7"}
+  [1m[36mPlayer Load (2.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 81ms (Views: 71.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:03:19 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (5.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 95ms (Views: 80.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/teams/1/players/12" for ::1 at 2017-05-14 02:03:22 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"12"}
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 61ms (Views: 54.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:03:25 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 92ms (Views: 83.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams/1/players/4" for ::1 at 2017-05-14 02:03:27 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"4"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 71ms (Views: 61.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/teams/1/players/new" for ::1 at 2017-05-14 02:03:30 -0400
+Processing by PlayersController#new as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (729.2ms)
+  Rendered players/new.html.erb within layouts/application (777.3ms)
+Completed 200 OK in 836ms (Views: 829.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/teams/1/players" for ::1 at 2017-05-14 02:03:41 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wrQyjyYxqLWDPiwiKsX1FsqqI7xAp3IlPMfu0bf+rOowaHb6zLhCsAYDgsIZvGRRf7MPXS8hVMAtVU7HOkARiA==", "player"=>{"nombre"=>"dgfg", "apellido"=>"sdgfh", "pais"=>"AI", "edad"=>"8"}, "commit"=>"Ingresar jugador", "team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (299.0ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "dgfg"], ["apellido", "sdgfh"], ["pais", "AI"], ["edad", 8], ["created_at", 2017-05-14 06:03:41 UTC], ["updated_at", 2017-05-14 06:03:41 UTC], ["team_id", 1]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/1/players
+Completed 302 Found in 347ms (ActiveRecord: 339.9ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:03:41 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 177ms (Views: 153.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/1/players/new" for ::1 at 2017-05-14 02:04:22 -0400
+Processing by PlayersController#new as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (41.4ms)
+  Rendered players/new.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 917ms (Views: 882.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/teams/1/players" for ::1 at 2017-05-14 02:04:32 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MOg8o0qDGKWwYbOFryNbvzlU1qlfymLSumZGdfqWE/HCNHjWoAryoDVcHWWcWsr4jE36SDBMRDer9OZjdyiukw==", "player"=>{"nombre"=>"adsjkn", "apellido"=>"anjskd", "pais"=>"HM", "edad"=>"3"}, "commit"=>"Ingresar jugador", "team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (57.7ms)
+  Rendered players/new.html.erb within layouts/application (90.7ms)
+Completed 200 OK in 186ms (Views: 179.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/teams/1/players" for ::1 at 2017-05-14 02:04:41 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lr+Ns3/aBQSYFgl4M7lWhSJj3LP3hfn/gBGuvdOfdtfLa+Fjr77CAoJmqb7pLJIzujl2O40/u46CFbubaLSdgg==", "player"=>{"nombre"=>"adsjkn", "apellido"=>"anjskd", "pais"=>"HM", "edad"=>"80"}, "commit"=>"Ingresar jugador", "team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (45.7ms)
+  Rendered players/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 94ms (Views: 88.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/teams/1/players" for ::1 at 2017-05-14 02:04:46 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f0yZ5tVObmdKPvf9ae4B7J4b/zclfs+tmcg4QR9DoXqamPU2BSqpYVBOVzuze8VaBkFVv1/EjdybzC1npGhKLw==", "player"=>{"nombre"=>"adsjkn", "apellido"=>"anjskd", "pais"=>"HM", "edad"=>"68"}, "commit"=>"Ingresar jugador", "team_id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (42.9ms)
+  Rendered players/new.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/teams/1/players" for ::1 at 2017-05-14 02:04:50 -0400
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iqe6GjxrdwOmIiHBiPQduzsiNClhwlPRCe0BWsA5Jm3Hc9bK7A+wBbxSgQdSYdkNo3ieoRt4EaAL6RR8exLNOA==", "player"=>{"nombre"=>"adsjkn", "apellido"=>"anjskd", "pais"=>"HM", "edad"=>"60"}, "commit"=>"Ingresar jugador", "team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (44.4ms)[0m  [1m[32mINSERT INTO "players" ("nombre", "apellido", "pais", "edad", "created_at", "updated_at", "team_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nombre", "adsjkn"], ["apellido", "anjskd"], ["pais", "HM"], ["edad", 60], ["created_at", 2017-05-14 06:04:50 UTC], ["updated_at", 2017-05-14 06:04:50 UTC], ["team_id", 1]]
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/teams/1/players
+Completed 302 Found in 91ms (ActiveRecord: 85.4ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:04:50 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 97ms (Views: 69.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:04:56 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 210ms (Views: 77.0ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:04:57 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 60ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/4" for ::1 at 2017-05-14 02:04:59 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 4]]
+  Rendered teams/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 160ms (Views: 50.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:05:01 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 83ms (Views: 77.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams/6" for ::1 at 2017-05-14 02:05:02 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 6]]
+  Rendered teams/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 74ms (Views: 67.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams/6/edit" for ::1 at 2017-05-14 02:05:04 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (3.4ms)
+  Rendered teams/edit.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 141ms (Views: 94.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:05:06 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/2" for ::1 at 2017-05-14 02:05:13 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 2]]
+  Rendered teams/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 62ms (Views: 57.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teams/2/players/new" for ::1 at 2017-05-14 02:05:15 -0400
+Processing by PlayersController#new as HTML
+  Parameters: {"team_id"=>"2"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering players/new.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered players/_form.html.erb (64.5ms)
+  Rendered players/new.html.erb within layouts/application (98.8ms)
+Completed 200 OK in 173ms (Views: 143.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams/2/players" for ::1 at 2017-05-14 02:05:17 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"2"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 2]]
+  Rendered players/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 107ms (Views: 59.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:05:23 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 113ms (Views: 63.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:05:24 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 78ms (Views: 54.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:05:26 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (2.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 2.8ms)
+
+
