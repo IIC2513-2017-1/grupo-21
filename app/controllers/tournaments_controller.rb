@@ -1,6 +1,11 @@
 class TournamentsController < ApplicationController
+  include Secured
+
   before_action :set_tournament, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
   helper_method :dict_tipo
+  before_action :is_current_user?, only: [:edit, :update, :destroy]
+
   # GET /tournaments
   # GET /tournaments.json
   def index
@@ -73,5 +78,10 @@ class TournamentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
       params.require(:tournament).permit(:nombre, :tipo, team_ids:[])
+            .merge(user_id: current_user.id)
+    end
+
+    def is_current_user?
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @team.user == current_user
     end
 end

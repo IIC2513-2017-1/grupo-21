@@ -22,9 +22,9 @@
         <td><%= player.edad %></td>
         <td><%= player.team.nombre %></td>
         <td><%= link_to 'Mostrar información', team_player_path(@team, player) %></td>
-        <% if current_user %>
-        <td><%= link_to 'Editar', edit_team_player_path(@team, player) %></td>
-        <td><%= link_to 'Borrar', team_player_path(@team, player), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+        <% if current_user && current_user == player.team.user%>
+          <td><%= link_to 'Editar', edit_team_player_path(@team, player) %></td>
+          <td><%= link_to 'Borrar', team_player_path(@team, player), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
         <% end %>
       </tr>
     <% end %>

@@ -3,6 +3,7 @@ class PlayersController < ApplicationController
 
   before_action :set_player, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
+  before_action :is_current_user?, only: [:edit, :update, :destroy]
 
   # GET /players
   # GET /players.json
@@ -77,5 +78,9 @@ class PlayersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
       params.require(:player).permit(:nombre, :apellido, :pais, :edad, :dorsal, :goles, :asistencias, :team_id)
+    end
+
+    def is_current_user?
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @player.team.user == current_user
     end
 end

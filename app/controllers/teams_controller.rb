@@ -1,5 +1,9 @@
 class TeamsController < ApplicationController
+  include Secured
+
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
+  before_action :is_current_user?, only: [:edit, :update, :destroy]
 
   # GET /teams
   # GET /teams.json
@@ -69,6 +73,10 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:nombre, :pais)
+      params.require(:team).permit(:nombre, :pais).merge(user_id: current_user.id)
+    end
+
+    def is_current_user?
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @team.user == current_user
     end
 end

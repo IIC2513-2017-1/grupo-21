@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only: [:new, :create, :destroy, :edit, :update, :show]
+  resources :users
   resources :tournaments do
     resources :matches
   end

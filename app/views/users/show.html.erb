@@ -7,18 +7,10 @@
 
 <p>
   <strong>Nombre:</strong>
-  <%= @user.first_name %>
+  <%= @user.full_name %>
 </p>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Contraseña:</strong>
-  <%= @user.password %>
-</p>
-
-<%= link_to 'Editar', edit_user_path(@user) %> |
+<% if current_user%>
+  <%= link_to 'Editar', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Volver', users_path %>

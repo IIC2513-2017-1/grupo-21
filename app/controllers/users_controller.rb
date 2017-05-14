@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  include Secured
+
+  before_action :logged_in?, only: [:edit, :update, :destroy, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :is_current_user?, only: [:edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -71,5 +75,9 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :first_name, :last_name, :password,
       :password_confirmation)
+    end
+
+    def is_current_user?
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @user == current_user
     end
 end

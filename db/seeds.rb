@@ -10,20 +10,26 @@ Team.delete_all
 Player.delete_all
 User.delete_all
 
+my_user = User.create!(first_name: "Isaac", last_name: "Carrera",
+email: "isfecave@gmail.com", password: "asdasd")
+
+usuarios = []
+usuarios << my_user
+10.times do |u|
+  usuarios << User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,
+  email: Faker::Internet.email, password: Faker::Internet.password(6))
+end
+
 equipos = []
-5.times do |j|
-  equipos << Team.create(nombre: Faker::Team.name, pais: "Chile")
+
+50.times do |j|
+  equipos << Team.create!(nombre: Faker::Team.unique.name, pais: "Chile", user_id: usuarios.sample.id)
 end
 
 paises = ISO3166::Country.find_all_countries_by_region('Americas')
 equipos.each do |equipo|
   20.times do |numero|
-    Player.create(nombre: Faker::Name.first_name, apellido: Faker::Name.last_name,
-    pais: paises[rand(paises.length)].ioc, edad: 15 + rand(20), team_id: equipo.id)
+    Player.create!(nombre: Faker::Name.first_name, apellido: Faker::Name.last_name,
+    pais: "Chile", edad: 15 + rand(20), team_id: equipo.id)
   end
-end
-
-10.times do |u|
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,
-  email: Faker::Internet.email, password: Faker::Internet.password(6))
 end

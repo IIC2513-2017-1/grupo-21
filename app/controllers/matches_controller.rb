@@ -1,7 +1,9 @@
 class MatchesController < ApplicationController
   include Secured
+  
   before_action :set_match, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
+  before_action :is_current_user?, only: [:edit, :update, :destroy]
 
   # GET /matches
   # GET /matches.json
@@ -77,5 +79,9 @@ class MatchesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def match_params
       params.require(:match).permit(:fecha, :tournament_id, :equipo_local_id, :equipo_visita_id)
+    end
+
+    def is_current_user?
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @match.tournament.user == current_user
     end
 end

@@ -6,6 +6,7 @@
       <th>Nombre</th>
       <th>Tipo</th>
       <th>Número de equipos</th>
+      <th>Creador</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +17,9 @@
         <td><%= tournament.nombre %></td>
         <td><%= dict_tipo[tournament.tipo]  %></td>
         <td><%= tournament.team_ids.length  %></td>
+        <td><%= tournament.user.email  %></td>
         <td><%= link_to 'Mostrar', tournament %></td>
-        <% if current_user %>
+        <% if current_user && current_user == tournament.user%>
           <td><%= link_to 'Editar', edit_tournament_path(tournament) %></td>
           <td><%= link_to 'Borrar', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>

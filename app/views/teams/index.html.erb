@@ -16,7 +16,7 @@
         <td><%= team.nombre %></td>
         <td><%= team.pais %></td>
         <td><%= link_to 'Mostrar información', team %></td>
-        <% if current_user%>
+        <% if current_user && current_user == team.user%>
           <td><%= link_to 'Editar', edit_team_path(team) %></td>
           <td><%= link_to 'Borrar', team, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
         <%end%>

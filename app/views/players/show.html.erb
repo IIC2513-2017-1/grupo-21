@@ -24,7 +24,7 @@
   <%= @player.team_id.to_s + " - " + @player.team.nombre %>
 </p>
 
-<% if current_user %>
-<%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
+<% if current_user && current_user == @player.team.user%>
+  <%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
 <% end %>
 <%= link_to 'Volver', team_players_path(@team.id) %>

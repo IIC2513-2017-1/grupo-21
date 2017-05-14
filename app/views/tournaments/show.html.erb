@@ -16,7 +16,7 @@
   <% end %>
 </p>
 <%= link_to 'Ver partidos', tournament_matches_path(@tournament.id) %>
-<% if current_user%>
+<% if current_user && current_user == @tournament.user%>
   <%= link_to 'Agregar partidos', new_tournament_match_path(@tournament.id) %>
 
   <%= link_to 'Editar', edit_tournament_path(@tournament) %> |

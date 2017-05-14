@@ -18,7 +18,7 @@
   <strong>Equipo Vista: (ID - Nombre)</strong>
   <%= @match.equipo_visita_id.to_s + " - " + @match.equipo_visita.nombre %>
 </p>
-<% if current_user%>
+<% if current_user && current_user == @match.tournament.user%>
   <%= link_to 'Editar', edit_tournament_match_path(@tournament, @match) %> |
 <%end%>
 <%= link_to 'Volver', tournament_matches_path(@tournament) %>

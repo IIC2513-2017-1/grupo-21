@@ -12,6 +12,9 @@
 #
 
 class User < ApplicationRecord
+
+  has_many :tournaments
+  has_many :teams
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 },
                        confirmation: true, allow_blank: false
