@@ -1,5 +1,5 @@
 
-<h1>Partidos</h1>
+<h1>Partidos por jugar</h1>
 
 <table>
   <thead>
@@ -13,11 +13,47 @@
   </thead>
 
   <tbody>
-    <% @matches.each do |match| %>
+    <% @matches_fijados.each do |match| %>
       <tr>
         <td><%= match.tournament.nombre %></td>
         <td><%= match.fecha %></td>
         <td><%= match.equipo_local.nombre %></td>
+        <td><%= match.equipo_visita.nombre %></td>
+        <td><%= link_to 'Mostrar información', tournament_match_path(@tournament, match) %></td>
+        <% if current_user && current_user == match.tournament.user%>
+        <td><%= link_to 'Finalizar Partido', finalizar_partido_path(@tournament, match) %></td>
+
+          <td><%= link_to 'Editar', edit_tournament_match_path(@tournament, match) %></td>
+          <td><%= link_to 'Borrar', tournament_match_path(@tournament, match), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Partidos Finalizados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campeonato</th>
+      <th>Fecha</th>
+      <th>Equipo Local</th>
+      <th>Resultado</th>
+      <th>Equipo Visita</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches_terminados.each do |match| %>
+      <tr>
+        <td><%= match.tournament.nombre %></td>
+        <td><%= match.fecha %></td>
+        <td><%= match.equipo_local.nombre %></td>
+        <td><%= match.resultado %></td>
         <td><%= match.equipo_visita.nombre %></td>
         <td><%= link_to 'Mostrar información', tournament_match_path(@tournament, match) %></td>
         <% if current_user && current_user == match.tournament.user%>
@@ -28,7 +64,5 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
 
 <%= link_to 'Nuevo Partido', new_tournament_match_path(@tournament.id) %>

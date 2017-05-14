@@ -1,0 +1,24 @@
+<%= form_for :finish_match, html: {url: update_finish_match_path, method: 'patch'} do |f| %>
+<% if match.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+    <ul>
+    <% match.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :goles_local, 'Goles a favor de ' + match.equipo_local.nombre %>
+    <%= f.number_field :goles_local, :required => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :goles_visita, 'Goles a favor de ' + match.equipo_visita.nombre %>
+    <%= f.number_field :goles_visita, :required => true  %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Finalizar Partido' %>
+  </div>
+<% end %>

@@ -13,11 +13,22 @@
   <strong>Equipo Local: (ID - Nombre)</strong>
   <%= @match.equipo_local_id.to_s + " - " + @match.equipo_local.nombre %>
 </p>
+<p>
+  <strong>Goles Equipo Local: (ID - Nombre)</strong>
+  <%= @match.goles_local%>
+</p>
 
 <p>
-  <strong>Equipo Vista: (ID - Nombre)</strong>
+  <strong>Equipo Visita: (ID - Nombre)</strong>
   <%= @match.equipo_visita_id.to_s + " - " + @match.equipo_visita.nombre %>
 </p>
+
+<p>
+  <strong>Goles equipo visita: (ID - Nombre)</strong>
+  <%= @match.goles_visita%>
+</p>
+
+
 <% if current_user && current_user == @match.tournament.user%>
   <%= link_to 'Editar', edit_tournament_match_path(@tournament, @match) %> |
 <%end%>
