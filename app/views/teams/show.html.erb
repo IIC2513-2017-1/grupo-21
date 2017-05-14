@@ -16,8 +16,9 @@
     <%= player.apellido + ", " + player.nombre %>
   <% end %>
 </p>
-
-<%= link_to 'Agregar jugadores', new_team_player_path(@team.id) %>
 <%= link_to 'Ver jugadores', team_players_path(@team.id) %>
-<%= link_to 'Editar', edit_team_path(@team) %> |
+<% if current_user%>
+  <%= link_to 'Agregar jugadores', new_team_player_path(@team.id) %>
+  <%= link_to 'Editar', edit_team_path(@team) %> |
+<%end%>
 <%= link_to 'Volver', teams_path %>

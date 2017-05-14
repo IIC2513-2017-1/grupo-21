@@ -17,8 +17,10 @@
         <td><%= dict_tipo[tournament.tipo]  %></td>
         <td><%= tournament.team_ids.length  %></td>
         <td><%= link_to 'Mostrar', tournament %></td>
-        <td><%= link_to 'Editar', edit_tournament_path(tournament) %></td>
-        <td><%= link_to 'Borrar', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user %>
+          <td><%= link_to 'Editar', edit_tournament_path(tournament) %></td>
+          <td><%= link_to 'Borrar', tournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>

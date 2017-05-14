@@ -23206,3 +23206,1015 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/" for ::1 at 2017-05-14 02:11:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (214.0ms)
+Completed 200 OK in 2277ms (Views: 2112.7ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 02:11:18 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1407.8ms)
+Completed 200 OK in 1496ms (Views: 1462.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-05-14 02:11:21 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 152ms (Views: 84.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 02:11:22 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 02:16:33 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 1174ms (Views: 1085.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:16:51 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (2.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 88ms (Views: 77.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:16:53 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 84ms (Views: 78.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:16:55 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 213ms (Views: 125.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tournaments/1/edit" for ::1 at 2017-05-14 02:16:57 -0400
+Processing by TournamentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/edit.html.erb within layouts/application
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered tournaments/_form.html.erb (790.7ms)
+  Rendered tournaments/edit.html.erb within layouts/application (827.1ms)
+Completed 200 OK in 1075ms (Views: 878.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:16:59 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 82ms (Views: 74.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:17:32 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (1.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 431ms (Views: 388.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:18:04 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (1.1ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 1105ms (Views: 1095.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:18:08 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:18:09 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 76ms (Views: 69.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:18:11 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 86ms (Views: 76.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:18:12 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:18:14 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 69ms (Views: 62.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 02:18:15 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (2.9ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (332.6ms)
+Completed 200 OK in 506ms (Views: 485.6ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:18:18 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 79ms (Views: 56.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams/6" for ::1 at 2017-05-14 02:18:20 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 6]]
+  Rendered teams/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:18:22 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 640ms (Views: 636.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/5" for ::1 at 2017-05-14 02:18:23 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeam Load (1.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 5]]
+  Rendered teams/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 255ms (Views: 249.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:18:25 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 76ms (Views: 71.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:47:00 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (4.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 726ms (Views: 653.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:48:36 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :logged_in? rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 02:48:36 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.2ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 757ms (Views: 659.0ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:48:45 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 92ms (Views: 83.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:48:58 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 423ms (Views: 419.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 02:48:59 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 116ms (Views: 102.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:49:02 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 90ms (Views: 85.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:50:13 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (2.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (54.8ms)
+Completed 200 OK in 673ms (Views: 646.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:50:15 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (2.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 82ms (Views: 70.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/tournaments/1/" for ::1 at 2017-05-14 02:50:20 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 81ms (Views: 73.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tournaments/1/matches" for ::1 at 2017-05-14 02:50:23 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"tournament_id"=>"1"}
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (138.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (176.4ms)
+Completed 200 OK in 421ms (Views: 171.5ms | ActiveRecord: 147.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:50:30 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (8.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 104ms (Views: 88.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:50:32 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 135ms (Views: 126.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tournaments/1/matches" for ::1 at 2017-05-14 02:54:58 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"tournament_id"=>"1"}
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (75.8ms)
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 14.5ms)
+
+
+  
+SyntaxError (/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/matches/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/aberforth/Dropbox/Primer Semestre 2017/tecnologias_web/grupo-21/app/views/matches/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/matches/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/matches/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.5ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (204.2ms)
+Started GET "/tournaments/1/matches" for ::1 at 2017-05-14 02:55:35 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"tournament_id"=>"1"}
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (2.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (153.0ms)
+Completed 200 OK in 1274ms (Views: 1250.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/tournaments/1/matches/1" for ::1 at 2017-05-14 02:55:40 -0400
+Processing by MatchesController#show as HTML
+  Parameters: {"tournament_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (46.6ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTournament Load (2.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 124ms (Views: 64.6ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/tournaments/1/matches/new" for ::1 at 2017-05-14 02:55:44 -0400
+Processing by MatchesController#new as HTML
+  Parameters: {"tournament_id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :logged_in? rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 02:55:44 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 90ms (Views: 78.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:59:00 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (2.1ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (136.1ms)
+Completed 200 OK in 841ms (Views: 724.4ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:59:03 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.9ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 104ms (Views: 95.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/tournaments/1/matches" for ::1 at 2017-05-14 02:59:05 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"tournament_id"=>"1"}
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 229ms (Views: 184.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/tournaments/1/matches/1" for ::1 at 2017-05-14 02:59:06 -0400
+Processing by MatchesController#show as HTML
+  Parameters: {"tournament_id"=>"1", "id"=>"1"}
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 117ms (Views: 109.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tournaments/1/matches" for ::1 at 2017-05-14 02:59:08 -0400
+Processing by MatchesController#index as HTML
+  Parameters: {"tournament_id"=>"1"}
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (6.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTeam Load (2.6ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 101ms (Views: 80.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:59:09 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:59:11 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for ::1 at 2017-05-14 02:59:12 -0400
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  Rendered teams/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/1" for ::1 at 2017-05-14 02:59:14 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered teams/show.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 115ms (Views: 104.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:59:16 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 59ms (Views: 53.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/1/players/14" for ::1 at 2017-05-14 02:59:18 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"14"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 75ms (Views: 52.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:59:19 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 60ms (Views: 51.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams/1/players/15" for ::1 at 2017-05-14 02:59:21 -0400
+Processing by PlayersController#show as HTML
+  Parameters: {"team_id"=>"1", "id"=>"15"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered players/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams/1/players" for ::1 at 2017-05-14 02:59:23 -0400
+Processing by PlayersController#index as HTML
+  Parameters: {"team_id"=>"1"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = $1[0m  [["team_id", 1]]
+  Rendered players/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 69ms (Views: 59.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:59:26 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 02:59:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 107ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2017-05-14 02:59:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G7IGxQLbJNA1AfO/7Vqgy/Yxsev2dxWMY3qr1HR6eSjH2FmtwqOpITTTayWkFi6d6MWNCbhKw0LMMtl4dutB5Q==", "session"=>{"email"=>"isfecave@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (57.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isfecave@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 62.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 02:59:35 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (24.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 99ms (Views: 69.3ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:59:37 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:59:39 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.6ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 108ms (Views: 102.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/tournaments/1" for ::1 at 2017-05-14 02:59:41 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTournament Load (1.8ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 64ms (Views: 55.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:59:42 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.7ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 87ms (Views: 80.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/tournaments/2" for ::1 at 2017-05-14 02:59:43 -0400
+Processing by TournamentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTournament Load (0.3ms)[0m  [1m[34mSELECT  "tournaments".* FROM "tournaments" WHERE "tournaments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tournaments/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered tournaments/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 02:59:44 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 2.2ms)
+
+
+  [1m[35m (49.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDiggestToUser (20170514070206)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(935276830336003575);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDiggestToUser (20170514070206)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (338.3ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "hildegard@robel.org"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$1us143tCHMFoA0cXhJcGouhkZ1Jvq/Tzal/Go0d0PGCif81tAOSZi"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 1]]
+  [1m[36mUser Exists (7.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "evelyn@keeblermacgyver.io"], ["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$rpGK5pA.mpgZTXbttZDPpuFQpPraS33szTI6YtnBDA2uGiKA.IuRC"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 2]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "griffin@gottlieb.org"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$Vt0aBB3bUIoJITa4n1AthuGlzLz7In8JHvZBkd3PKLQUdhyGxu6ee"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 3]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "gabriel@collier.info"], ["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$5Z3U.wlf4EHXby9tPEq6BeVwAwNtE2r/VQkPvmvoitX.NcAdQQq8W"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 4]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "elsa_gutkowski@tremblay.io"], ["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$.GOekfB59oOlAO8L/kPRWuuZ3eEM3KC3XiFzMxIkgiIEwtAbweri6"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 5]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "orin_aufderhar@fayblick.com"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$TxXVcF3PQAakIM/voSAqKeABb8Yoi.B5DliKQnPFyVAsFHPJ11./O"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 6]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "otha_hegmann@greenfelderparker.io"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$KI.TwXzlIJedUmIMkwCEhuGwEAO92VD8UgU8QkP1w9KT/XVEF7Lny"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 7]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "paolo@tromp.io"], ["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$xU3BTy3uQoIE/GzK5bHxou4v5JZxCGnJvDE3Ls1yYSHOisBVAiYsq"], ["updated_at", 2017-05-14 07:05:43 UTC], ["id", 8]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "marcella_roob@effertz.net"], ["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$7DzhwqAiH28mO2PkvNO20uIQ6fH1rUphAx7NKSEoCC6TCgFLAAERa"], ["updated_at", 2017-05-14 07:05:44 UTC], ["id", 9]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "fabian_schmidt@kling.io"], ["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$K8tCSSNnBj2jVclG./W7t.yBUqqQzCvByvFZz7QRrQ4sq.PsVmgcC"], ["updated_at", 2017-05-14 07:05:44 UTC], ["id", 10]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "isfecave@gmail.com"], ["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "$2a$10$ZopmyvBi1ZDbp24uSJ6xCuV6XksfvHqeypAVs3XWdgWPT.pKv.cpu"], ["updated_at", 2017-05-14 07:05:44 UTC], ["id", 11]]
+  [1m[35m (96.4ms)[0m  [1m[35mALTER TABLE "users" DROP "password"[0m
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170514070206"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (16.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(935276830336003575)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-05-14 03:07:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (uninitialized constant SessionController):
+  
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (67.1ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (35.0ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (42.6ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (329.1ms)
+Started GET "/" for ::1 at 2017-05-14 03:07:53 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (944.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 5258ms (Views: 5243.4ms | ActiveRecord: 10.9ms)
+
+
+Started DELETE "/session" for ::1 at 2017-05-14 03:08:15 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QhKOIG+1Wfh57eavpif8P6pUf5CQST2q+B4v1JLCyyinxuLwv9Ge/mOdRml8sjiJMg7VGOrzf9v6GjryKekgfQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:08:15 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 84ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 03:08:17 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 88ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-05-14 03:08:19 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 74ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 03:08:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-05-14 03:08:22 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 68ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 03:08:23 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 92ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-05-14 03:08:24 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 100ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 03:08:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 91ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2017-05-14 03:08:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3FhkcgXHUUp5FZDBIVZlPNh+Uok7OrpHJsWLDsTmaN5gsVQFr77cp5E1JS6sNi3AZOcSCWSByF/JFDQrX/AfhQ==", "session"=>{"email"=>"isfecave@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isfecave@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:08:28 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:10:50 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (2.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (336.8ms)
+Completed 200 OK in 1327ms (Views: 1063.0ms | ActiveRecord: 25.0ms)
+
+
+Started DELETE "/session" for ::1 at 2017-05-14 03:10:56 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fHwZKmda2VZk4cCvtVjFkSokjI5+/T478WZZASSe6dIbzOd12FS8kkyC/FFUEvUJ5m/b75KJ0UJsw8x2IS45Mg=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :sesion_iniciada rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:10:56 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/session" for ::1 at 2017-05-14 03:10:57 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"64ijRJKCUzuEv5bT3G6xPTZWX+pQc0+9PmHUmAQ8flSMOF0bLYw2/6zcqi09JIGl+h0Ii7wHoMSjxEHvAYyutA=="}
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :sesion_iniciada rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:10:58 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 79ms (Views: 70.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/tournaments" for ::1 at 2017-05-14 03:11:15 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.0ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (211.4ms)
+Completed 200 OK in 1041ms (Views: 952.6ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/session" for ::1 at 2017-05-14 03:11:17 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"48QaHB+gXjqXalwUVxQJOwQRa7a+43h2BT806ALitbaEdORDoK47/r8JYOq2XjmjyFo811KXlw+YmqGfB1JlVg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:11:17 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.5ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 72ms (Views: 66.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/session/new" for ::1 at 2017-05-14 03:11:20 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2017-05-14 03:11:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+91rYCv7n0Jtzj+fFmI3q242qlOX5PKvRRGpQ/noEXtGolFatfyx8S94YM/fkvEoeYbzS3lpF99uiSto2Udmag==", "session"=>{"email"=>"isfecave@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isfecave@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:11:24 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (1.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/series" for ::1 at 2017-05-14 03:11:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/series"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (17.7ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/aberforth/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (174.6ms)
+Started GET "/session/new" for ::1 at 2017-05-14 03:11:31 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :sesion_iniciada rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 03:11:31 -0400
+Processing by TournamentsController#index as HTML
+  Rendering tournaments/index.html.erb within layouts/application
+  [1m[36mTournament Load (0.4ms)[0m  [1m[34mSELECT "tournaments".* FROM "tournaments"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "teams".id FROM "teams" INNER JOIN "teams_tournaments" ON "teams"."id" = "teams_tournaments"."team_id" WHERE "teams_tournaments"."tournament_id" = $1[0m  [["tournament_id", 2]]
+  Rendered tournaments/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 2.0ms)
+
+

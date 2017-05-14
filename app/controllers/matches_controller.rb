@@ -1,5 +1,7 @@
 class MatchesController < ApplicationController
+  include Secured
   before_action :set_match, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
 
   # GET /matches
   # GET /matches.json
@@ -11,7 +13,6 @@ class MatchesController < ApplicationController
   # GET /matches/1
   # GET /matches/1.json
   def show
-    @tournament = Tournament.find(params[:tournament_id])
   end
 
   # GET /matches/new
@@ -22,7 +23,6 @@ class MatchesController < ApplicationController
 
   # GET /matches/1/edit
   def edit
-    @tournament = Tournament.find(params[:tournament_id])
   end
 
   # POST /matches

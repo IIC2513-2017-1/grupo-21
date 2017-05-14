@@ -1,5 +1,8 @@
 class PlayersController < ApplicationController
+  include Secured
+
   before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
 
   # GET /players
   # GET /players.json
@@ -11,7 +14,6 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
-    @team = Team.find(params[:team_id])
   end
 
   # GET /players/new
@@ -22,7 +24,6 @@ class PlayersController < ApplicationController
 
   # GET /players/1/edit
   def edit
-    @team = Team.find(params[:team_id])
   end
 
   # POST /players

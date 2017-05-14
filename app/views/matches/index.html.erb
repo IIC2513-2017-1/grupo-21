@@ -20,8 +20,10 @@
         <td><%= match.equipo_local.nombre %></td>
         <td><%= match.equipo_visita.nombre %></td>
         <td><%= link_to 'Mostrar información', tournament_match_path(@tournament, match) %></td>
+        <% if current_user%>
         <td><%= link_to 'Editar', edit_tournament_match_path(@tournament, match) %></td>
         <td><%= link_to 'Borrar', tournament_match_path(@tournament, match), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
