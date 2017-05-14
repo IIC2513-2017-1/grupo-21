@@ -16,10 +16,10 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= Tournament.find_by_id(match.tournament_id).nombre %></td>
+        <td><%= match.tournament.nombre %></td>
         <td><%= match.fecha %></td>
-        <td><%= Team.find_by_id(match.equipo_local_id).nombre %></td>
-        <td><%= Team.find_by_id(match.equipo_visita_id).nombre %></td>
+        <td><%= match.equipo_local.nombre %></td>
+        <td><%= match.equipo_visita.nombre %></td>
         <td><%= link_to 'Mostrar información', match %></td>
         <td><%= link_to 'Editar', edit_match_path(match) %></td>
         <td><%= link_to 'Borrar', match, method: :delete, data: { confirm: 'Estás seguro?' } %></td>

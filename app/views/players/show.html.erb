@@ -22,7 +22,7 @@
 
 <p>
   <strong>Equipo: (ID - nombre)</strong>
-  <%= @player.team_id.to_s + " - " + Team.find_by_id(@player.team_id).nombre %>
+  <%= @player.team_id.to_s + " - " + @player.team.nombre %>
 </p>
 
 

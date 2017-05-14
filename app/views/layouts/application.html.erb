@@ -14,13 +14,15 @@
         <%= link_to "Organiza2", root_path  %>
       </div>
       <nav id="main-menu">
-        <%= link_to 'Campeonatos', tournaments_path %>
-        <%= link_to 'Partidos', matches_path %>
-        <%= link_to 'Equipos', teams_path %>
-        <%= link_to 'Jugadores', players_path %>
-        <%= link_to 'Usuarios', users_path %>
+        <%= link_to 'Campeonatos', tournaments_path, class: "button" %>
+        <%= link_to 'Partidos', matches_path, class: "button" %>
+        <%= link_to 'Equipos', teams_path, class: "button" %>
+        <%= link_to 'Jugadores', players_path, class: "button" %>
+        <%= link_to 'Usuarios', users_path, class: "button" %>
       </nav>
     </header>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -21,10 +21,10 @@
         <td><%= player.apellido %></td>
         <td><%= player.pais %></td>
         <td><%= player.edad %></td>
-        <td><%= Team.find_by_id(player.team_id).nombre %></td>
+        <td><%= player.team.nombre %></td>
         <td><%= link_to 'Mostrar información', player %></td>
         <td><%= link_to 'Editar', edit_player_path(player) %></td>
-        <td><%= link_to 'Borrar', player, method: :delete, data: { confirm: 'Estás seguro∫?' } %></td>
+        <td><%= link_to 'Borrar', player, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

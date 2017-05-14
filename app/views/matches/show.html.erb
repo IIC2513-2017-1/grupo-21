@@ -3,7 +3,7 @@
 
 <p>
   <strong>Campeonato: (ID - Nombre)</strong>
-  <%= @match.tournament_id.to_s + " - " + Tournament.find_by_id(@match.tournament_id).nombre %>
+  <%= @match.tournament_id.to_s + " - " + @match.tournament.nombre %>
 </p>
 
 <p>
@@ -13,12 +13,12 @@
 
 <p>
   <strong>Equipo Local: (ID - Nombre)</strong>
-  <%= @match.equipo_local_id.to_s + " - " + Team.find_by_id(@match.equipo_local_id).nombre %>
+  <%= @match.equipo_local_id.to_s + " - " + @match.equipo_local.nombre %>
 </p>
 
 <p>
   <strong>Equipo Vista: (ID - Nombre)</strong>
-  <%= @match.equipo_visita_id.to_s + " - " + Team.find_by_id(@match.equipo_visita_id).nombre %>
+  <%= @match.equipo_visita_id.to_s + " - " + @match.equipo_visita.nombre %>
 </p>
 
 <%= link_to 'Editar', edit_match_path(@match) %> |
