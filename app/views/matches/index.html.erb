@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Partidos</h1>
 
@@ -20,9 +19,9 @@
         <td><%= match.fecha %></td>
         <td><%= match.equipo_local.nombre %></td>
         <td><%= match.equipo_visita.nombre %></td>
-        <td><%= link_to 'Mostrar información', match %></td>
-        <td><%= link_to 'Editar', edit_match_path(match) %></td>
-        <td><%= link_to 'Borrar', match, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+        <td><%= link_to 'Mostrar información', tournament_match_path(@tournament, match) %></td>
+        <td><%= link_to 'Editar', edit_tournament_match_path(@tournament, match) %></td>
+        <td><%= link_to 'Borrar', tournament_match_path(@tournament, match), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +29,4 @@
 
 <br>
 
-<%= link_to 'Nuevo Partido', new_match_path %>
+<%= link_to 'Nuevo Partido', new_tournament_match_path(@tournament.id) %>

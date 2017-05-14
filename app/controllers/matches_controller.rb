@@ -4,31 +4,36 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    @tournament = Tournament.find(params[:tournament_id])
+    @matches = @tournament.matches
   end
 
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @tournament = Tournament.find(params[:tournament_id])
   end
 
   # GET /matches/new
   def new
     @match = Match.new
+    @tournament = Tournament.find(params[:tournament_id])
   end
 
   # GET /matches/1/edit
   def edit
+    @tournament = Tournament.find(params[:tournament_id])
   end
 
   # POST /matches
   # POST /matches.json
   def create
-    @match = Match.new(match_params)
+    @tournament = Tournament.find(params[:tournament_id])
+    @match = @tournament.matches.new(match_params)
     respond_to do |format|
 
     if @match.save
-        format.html { redirect_to @match, notice: 'Match was successfully created.' }
+        format.html { redirect_to tournament_matches_path(@tournament), notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else
         format.html { render :new }
@@ -40,9 +45,10 @@ class MatchesController < ApplicationController
   # PATCH/PUT /matches/1
   # PATCH/PUT /matches/1.json
   def update
+
     respond_to do |format|
       if @match.update(match_params)
-        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
+        format.html { redirect_to tournament_matches_path(@tournament), notice: 'Match was successfully updated.' }
         format.json { render :show, status: :ok, location: @match }
       else
         format.html { render :edit }
@@ -56,7 +62,7 @@ class MatchesController < ApplicationController
   def destroy
     @match.destroy
     respond_to do |format|
-      format.html { redirect_to matches_url, notice: 'Match was successfully destroyed.' }
+      format.html { redirect_to tournament_matches_path(@tournament), notice: 'Match was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -65,6 +71,7 @@ class MatchesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_match
       @match = Match.find(params[:id])
+      @tournament = Tournament.find(params[:tournament_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

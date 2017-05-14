@@ -1,4 +1,4 @@
-<%= form_for(match) do |f| %>
+<%= form_for [@tournament, match] do |f| %>
   <% if match.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
@@ -18,17 +18,17 @@
 
   <div class="field">
     <%= f.label :tournament_id, 'Campeonato' %>
-    <%= f.select :tournament_id, Tournament.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Selecciona el campeonato' }, { required: true } %>
+    <%= f.select :tournament_id, Tournament.all.collect { |t| [ t.nombre, t.id ] }, { selected: @tournament.id }, {disabled: true} %>
   </div>
 
   <div class="field">
     <%= f.label :equipo_local_id %>
-    <%= f.select :equipo_local_id, Team.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Local' }, { required: true } %>
+    <%= f.select :equipo_local_id, @tournament.teams.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Local' }, { required: true } %>
   </div>
 
   <div class="field">
     <%= f.label :equipo_visita_id %>
-    <%= f.select :equipo_visita_id, Team.all.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Visita' }, { required: true } %>
+    <%= f.select :equipo_visita_id, @tournament.teams.collect { |t| [ t.nombre, t.id ] }, { include_blank: 'Equipo Visita' }, { required: true } %>
   </div>
 
   <div class="actions">

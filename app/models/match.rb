@@ -24,7 +24,6 @@ class Match < ApplicationRecord
   validates :equipo_local, presence: true, allow_blank: false
   validates :equipo_visita, presence: true, allow_blank: false
   validate :differents_teams?
-  validate :teams_in_tournament?
   # validate :nombre_metodo, ejecutará el método con ese nombre, el cual,
   # estará definido en el modelo. Las cosas de lógica por lo general deberían estar
   # en el modelo.
@@ -37,10 +36,4 @@ class Match < ApplicationRecord
     errors.add(:equipo_local, msg) unless equipo_local != equipo_visita
   end
 
-  def teams_in_tournament?
-    msg = ": ambos equipos deben estar inscritos en el campeonato"
-    if !(self.tournament.team_ids.include? equipo_visita_id and self.tournament.team_ids.include? equipo_local_id)
-      errors.add(:Torneo, msg)
-    end
-  end
 end

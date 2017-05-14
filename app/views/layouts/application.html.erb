@@ -15,13 +15,24 @@
       </div>
       <nav id="main-menu">
         <%= link_to 'Campeonatos', tournaments_path, class: "button" %>
-        <%= link_to 'Partidos', matches_path, class: "button" %>
         <%= link_to 'Equipos', teams_path, class: "button" %>
         <%= link_to 'Jugadores', players_path, class: "button" %>
-        <%= link_to 'Usuarios', users_path, class: "button" %>
       </nav>
+      <div>
+        <% if current_user %>
+          <%= link_to 'Logout', session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Login', new_session_path %> or
+          <%= link_to 'Sign Up', new_user_path %>
+        <% end %>
+      </div>
     </header>
     <main>
+      <% [:alert, :notice].each do |flash_type| %>
+        <% if (flash_message = flash[flash_type]).present? %>
+          <div class="<%= flash_type %>"><%= flash_message %></div>
+        <% end %>
+      <% end %>
       <%= yield %>
     </main>
   </body>

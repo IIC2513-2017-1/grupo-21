@@ -1,7 +1,7 @@
-<p id="notice"><%= notice %></p>
+
 <h1>Editar Partido</h1>
 
 <%= render 'form', match: @match %>
 
-<%= link_to 'Mostrar información', @match %> |
-<%= link_to 'Volver', matches_path %>
+<%= link_to 'Mostrar información', tournament_match_path(@tournament, @match) %> |
+<%= link_to 'Volver', tournament_matches_path(@tournament.id) %>
