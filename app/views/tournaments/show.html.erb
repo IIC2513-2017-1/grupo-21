@@ -15,6 +15,48 @@
     <%= team.nombre %>
   <% end %>
 </p>
+
+<!-- <p>
+  <strong>Tabla de posiciones:</strong>
+  <% @tabla.each do |key, value| %>
+    <br>
+    <%= @tournament.teams.find_by_id(key).nombre %>
+    <%= value %>
+  <% end %>
+</p> -->
+<table>
+  <thead>
+    <tr>
+      <th>Equipo</th>
+      <th>PJ</th>
+      <th>PG</th>
+      <th>PE</th>
+      <th>PP</th>
+      <th>GF</th>
+      <th>GC</th>
+      <th>DF</th>
+      <th>PUNTOS</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tabla.each do |key, value| %>
+      <tr>
+        <td><%= @tournament.teams.find_by_id(key).nombre %></td>
+        <td><%= value[:partidos_jugados]  %></td>
+        <td><%= value[:partidos_ganados] %></td>
+        <td><%= value[:partidos_empatados]  %></td>
+        <td><%= value[:partidos_perdidos]  %></td>
+        <td><%= value[:goles_favor]  %></td>
+        <td><%= value[:goles_contra]  %></td>
+        <td><%= value[:goles_favor] - value[:goles_contra]   %></td>
+        <td><%= value[:puntos]  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Ver partidos', tournament_matches_path(@tournament.id) %>
 <% if current_user && current_user == @tournament.user%>
   <%= link_to 'Agregar partidos', new_tournament_match_path(@tournament.id) %>

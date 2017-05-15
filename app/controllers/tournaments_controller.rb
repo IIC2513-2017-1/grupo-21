@@ -19,6 +19,72 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1
   # GET /tournaments/1.json
   def show
+    partidos = @tournament.matches.where(status_match: 'finalizado')
+    @equipos = []
+    partidos.each do |partido|
+      @equipos << partido.equipo_local
+      @equipos << partido.equipo_visita
+    end
+    Rails.logger.debug("Partidooooos: #{partidos.inspect}")
+    Rails.logger.debug("Clase: #{partidos.class.inspect}")
+    @equipos.uniq! {|equipo| equipo[:id] }
+    @tabla = {}
+    @equipos.each do |team|
+      puntos = 0
+      goles_favor = 0
+      goles_contra = 0
+      partidos_jugados = 0
+      partidos_ganados = 0
+      partidos_perdidos = 0
+      partidos_empatados = 0
+      Rails.logger.debug("Partidos jugados: #{partidos_jugados.inspect}")
+      partidos.each do |match|
+        if match.equipo_local == team
+          if match.goles_local > match.goles_visita
+            partidos_ganados += 1
+            goles_favor += match.goles_local
+            goles_contra += match.goles_visita
+            puntos += 3
+          elsif match.goles_local < match.goles_visita
+            partidos_perdidos += 1
+            goles_favor += match.goles_local
+            goles_contra += match.goles_visita
+          else
+            partidos_empatados += 1
+            goles_favor += match.goles_local
+            goles_contra += match.goles_visita
+            puntos += 1
+          end
+          partidos_jugados += 1
+        elsif match.equipo_visita == team
+          if match.goles_local < match.goles_visita
+            partidos_ganados += 1
+            goles_favor += match.goles_visita
+            goles_contra += match.goles_local
+            puntos += 3
+          elsif match.goles_local > match.goles_visita
+            partidos_perdidos += 1
+            goles_favor += match.goles_visita
+            goles_contra += match.goles_local
+          else
+            partidos_empatados += 1
+            goles_favor += match.goles_visita
+            goles_contra += match.goles_local
+            puntos += 1
+          end
+          partidos_jugados += 1
+        end
+
+      end
+
+      @tabla[team.id] = {puntos: puntos, partidos_empatados: partidos_empatados,
+                        partidos_perdidos: partidos_perdidos, partidos_ganados: partidos_ganados,
+                      goles_favor: goles_favor, goles_contra: goles_contra,
+                      partidos_jugados: partidos_jugados}
+      @tabla = Hash[ @tabla.sort_by { |key, val| val[:puntos] }.reverse ]
+     Rails.logger.debug("My object: #{@tabla.inspect}")
+    end
+
   end
 
   # GET /tournaments/new
