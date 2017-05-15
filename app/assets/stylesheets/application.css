@@ -98,3 +98,9 @@ header a:hover{
     border-radius: 50px;
     background-color: #ABD9F9;
 }
+
+.base_index {
+  padding: 20px;
+  padding-left: 50px;
+
+}
