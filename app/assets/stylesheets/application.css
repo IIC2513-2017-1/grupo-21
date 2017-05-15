@@ -25,7 +25,7 @@
  }
 
 body {
-  font-family: Helvetica, Arial;
+  font-family: Monospace, Helvetica, Arial;
   color: #333;
   padding-top: 85px;
   background-color: #32E399;
@@ -65,7 +65,8 @@ nav#main-menu, #logo {
 
 .logo-button {
   position: relative;
-  left: 40%
+  left: 40%;
+  font-family: Impact;
 }
 .menu-button {
 
