@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include Secured
 
-  before_action :logged_in?, only: [:edit, :update, :destroy, :create]
+  before_action :logged_in?, only: [:edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :is_current_user?, only: [:edit, :update, :destroy]
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514083017) do
+ActiveRecord::Schema.define(version: 20170515012045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20170514083017) do
   add_foreign_key "matches", "tournaments"
   add_foreign_key "players", "teams", on_delete: :cascade
   add_foreign_key "teams", "users"
-  add_foreign_key "teams_tournaments", "teams"
-  add_foreign_key "teams_tournaments", "tournaments"
+  add_foreign_key "teams_tournaments", "teams", on_delete: :cascade
+  add_foreign_key "teams_tournaments", "tournaments", on_delete: :cascade
   add_foreign_key "tournaments", "users"
 end
