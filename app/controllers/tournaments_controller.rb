@@ -148,6 +148,6 @@ class TournamentsController < ApplicationController
     end
 
     def is_current_user?
-      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @team.user == current_user
+      redirect_to(root_path, notice: 'Acceso Prohibido!') unless @tournament.user == current_user
     end
 end

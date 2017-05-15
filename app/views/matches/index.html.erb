@@ -65,4 +65,7 @@
   </tbody>
 </table>
 
-<%= link_to 'Nuevo Partido', new_tournament_match_path(@tournament.id) %>
+<% if current_user && current_user == @tournament.user%>
+  <%= link_to 'Nuevo Partido', new_tournament_match_path(@tournament.id) %>
+<% end %>
+<%= link_to 'Volver', tournament_path(@tournament.id) %>

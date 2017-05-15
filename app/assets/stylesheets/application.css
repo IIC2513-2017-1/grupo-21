@@ -14,27 +14,87 @@
  *= require_self
  */
  header {
-     height:50px;
-     background:#F0F0F0;
-     border:1px solid #CCC;
-     width:960px;
-     margin:0px auto;
+   position: fixed;
+   top: 0;
+   width: 95%;
+   padding: 10px;
+   box-sizing: border-box;
+   background: #9DCAFB;
+   border-bottom: 1px solid #aaa;
+   box-shadow: 0px 0px 5px 1px #777;
  }
+
+body {
+  font-family: Helvetica, Arial;
+  color: #333;
+  padding-top: 85px;
+  background-color: #32E399;
+}
+
 main {
-  position: relative;
-
+  position: static;
+  margin: 0 15px;
+  border: 2px solid #32797F;
+  border-radius: 10px;
+  background-color: white;
 }
+
+nav#main-menu, #logo {
+  vertical-align: middle;
+}
+
 #logo {
-  position: static;
-  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 1px;
 }
 
-#main-menu {
-  position: static;
+
+#user-options {
+  font-size: 12px;
+  color: #E87134;
+  position: absolute;
+  top: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
   text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  background: #FFFBED;
+  width: 99px;
+}
+
+.logo-button {
+  position: relative;
+  left: 40%
+}
+.menu-button {
+
 }
 
 nav#main-menu a.button {
   color: blue;
   border: solid blue 1px;
+  background-color: white;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+a:visited {
+  color: inherit;
+}
+
+header a {
+  text-decoration: none;
+}
+header a:hover{
+  background-color: inherit;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #32797F;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #ABD9F9;
 }

@@ -32,5 +32,7 @@
 </table>
 
 <br>
-
-<%= link_to 'Nuevo jugador', new_team_player_path(@team.id) %>
+<% if current_user && current_user == @team.user%>
+  <%= link_to 'Nuevo jugador', new_team_player_path(@team.id) %>
+<% end %>
+<%= link_to 'Volver', team_path(@team.id) %>

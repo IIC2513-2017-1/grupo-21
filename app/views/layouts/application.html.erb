@@ -11,18 +11,18 @@
   <body>
     <header>
       <div id="logo">
-        <%= link_to "Organiza2", root_path  %>
+        <h1><%= link_to "Organiza2", root_path, class: "logo-button"  %></h1>
       </div>
-      <nav id="main-menu">
-        <%= link_to 'Campeonatos', tournaments_path, class: "button" %>
-        <%= link_to 'Equipos', teams_path, class: "button" %>
+      <nav id="main-menu" class="center">
+        <%= link_to 'Campeonatos', tournaments_path, class: "menu-button" %> |
+        <%= link_to 'Equipos', teams_path, class: "menu-button" %>
       </nav>
-      <div>
+      <div id="user-options">
         <% if current_user %>
           <%= link_to 'Logout', session_path, method: :delete %>
         <% else %>
-          <%= link_to 'Login', new_session_path %> or
-          <%= link_to 'Sign Up', new_user_path %>
+          <%= link_to 'Login', new_session_path, class: "button" %> or
+          <%= link_to 'Sign Up', new_user_path, class: "button" %>
         <% end %>
       </div>
     </header>

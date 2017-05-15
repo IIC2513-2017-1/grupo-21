@@ -22,7 +22,7 @@ class User < ApplicationRecord
                     format: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
   validates :first_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']*)\z/
-  validates :last_name, presence: true, allow_blank: false, format: /\A([a-zA-Z']*)\z/
+  validates :last_name, presence: true, allow_blank: false, format: /\A([a-zA-Z' ]*)\z/
 
   def full_name
     "#{first_name} #{last_name}"

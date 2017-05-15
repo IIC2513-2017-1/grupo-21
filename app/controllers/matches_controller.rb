@@ -3,7 +3,7 @@ class MatchesController < ApplicationController
 
   before_action :set_match, only: [:show, :edit, :update, :destroy, :finalizar_partido]
   before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
-  before_action :is_current_user?, only: [:edit, :update, :destroy]
+  before_action :is_current_user?, only: [:new, :create, :edit, :update, :destroy]
   before_action :is_finished?, only: [:finalizar_partido]
 
   # GET /matches
