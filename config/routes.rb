@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :players
   end
   resource :session, only: [:new, :create, :destroy]
-  root 'tournaments#index'
+  root 'static_pages#home'
+  get 'home', to: 'static_pages#home', as: 'home'
+  get 'about', to: 'static_pages#about', as: 'about'
+  get 'objetivo', to: 'static_pages#objetivo', as: 'objetivo'
+  get 'como_usarlo', to: 'static_pages#como_usarlo', as: 'como_usarlo'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -37,6 +37,9 @@ gem 'faker'
 gem 'simple_form'
 gem 'countries'
 gem 'country_select'
+group :development do
+  gem "better_errors"
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

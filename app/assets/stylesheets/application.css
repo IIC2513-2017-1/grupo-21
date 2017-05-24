@@ -13,16 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
  header {
    position: fixed;
    top: 0;
    width: 95%;
    padding: 10px;
    box-sizing: border-box;
-   background: #9DCAFB;
+   background: #14566D;
    border-bottom: 1px solid #aaa;
    box-shadow: 0px 0px 5px 1px #777;
  }
+
 
 body {
   font-family: Monospace, Helvetica, Arial;
@@ -33,23 +35,20 @@ body {
 
 main {
   position: static;
-  margin: 0 15px;
+  margin: 0 50px;
   border: 2px solid #32797F;
   border-radius: 10px;
   background-color: white;
+  padding: 20px;
+  padding-left: 50px;
 }
-
+/*
 nav#main-menu, #logo {
   vertical-align: middle;
-}
-
-#logo {
-  margin: auto;
-  width: 50%;
-  border: 1px;
-}
+}*/
 
 
+/*
 #user-options {
   font-size: 12px;
   color: #E87134;
@@ -61,47 +60,44 @@ nav#main-menu, #logo {
   border-radius: 10px 10px 10px 10px;
   background: #FFFBED;
   width: 99px;
-}
+}*/
 
 .logo-button {
   position: relative;
-  left: 40%;
-  font-family: Impact;
+  left: 44%;
+  font-family: 'Barrio', cursive;
+  text-decoration: none;
+  margin-top: 50px;
+  width: 50%;
+  border: 1px;
+  font-size: 30px;
+  color: white;
 }
-.menu-button {
 
-}
 
-nav#main-menu a.button {
+/*nav#main-menu a.button {
   color: blue;
   border: solid blue 1px;
   background-color: white;
   font-family: Helvetica;
   text-align: center;
-}
+}*/
 
-a:visited {
+/*a:visited {
   color: inherit;
-}
+}*/
 
-header a {
+/*header a {
   text-decoration: none;
 }
 header a:hover{
   background-color: inherit;
-}
+}*/
 
-.center {
-    margin: auto;
-    width: 50%;
-    border: 2px solid #32797F;
-    padding: 5px;
-    border-radius: 50px;
-    background-color: #ABD9F9;
-}
-
-.base_index {
-  padding: 20px;
-  padding-left: 50px;
-
+footer {
+  text-align: center;
+  position: relative;
+  background-color: #14566D;
+  color: white;
+  font-family: 'Barrio', cursive;
 }
