@@ -1,3 +1,49 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.slide {
+  max-width:100%;
+  max-height:100%;
+  width: 680px;
+  display: block;
+  margin: auto;
+}
+
+.primera-slide {
+
+
+}
+
+.segunda-slide {
+
+}
+
+.tercera-slide {
+
+
+}
+
+.image {
+   position: relative;
+   width: 100%;
+   height:auto;
+   margin: auto;
+   text-align:center;
+}
+
+.text-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  color:#fff;
+  height:100px;
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: 1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}

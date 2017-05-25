@@ -39,15 +39,28 @@
         <% end %>
 
       </nav>
-      <!-- <div id="user-options">
+      <div id="user-options">
         <% if current_user %>
           <%= link_to 'Logout', session_path, method: :delete %>
         <% else %>
           <%= link_to 'Login', new_session_path, class: "button" %> <br>or<br>
           <%= link_to 'Sign Up', new_user_path, class: "button" %>
         <% end %>
-      </div> -->
+      </div>
     </header>
+    <% if current_user %>
+    <div class="menu">
+      <div class="title">MENU</div>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+  </div>
+  <% end %>
+  <% if !current_page?(controller: 'static_pages', action: 'home') %>
     <main>
       <% [:alert, :notice].each do |flash_type| %>
         <% if (flash_message = flash[flash_type]).present? %>
@@ -56,8 +69,20 @@
       <% end %>
       <%= yield %>
     </main>
+  <% else %>
+  <div class="main-static">
+    <% [:alert, :notice].each do |flash_type| %>
+      <% if (flash_message = flash[flash_type]).present? %>
+        <div class="<%= flash_type %>"><%= flash_message %></div>
+      <% end %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <% end %>
+</div>
+
     <footer>
-      © 2017 - Todos los derechos reservados
+      © 2017 - Todos los derechos reservados | Background: <a href="http://www.freepik.com">Designed by Freepik</a>
     </footer>
   </body>
 </html>
