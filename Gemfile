@@ -40,6 +40,8 @@ gem 'country_select'
 group :development do
   gem "better_errors"
 end
+gem 'jquery-ui-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

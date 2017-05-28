@@ -12,6 +12,8 @@ class TournamentsController < ApplicationController
     @tournaments = Tournament.all
   end
 
+  
+
   def dict_tipo
       @dict_tipo = {1 => "Liga", 2 => "Play-Off", 3 => "Liga + Play-Off"}
   end

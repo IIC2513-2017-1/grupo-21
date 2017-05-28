@@ -1,3 +1,43 @@
 // Place all the styles related to the Tournaments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tabla-posiciones:nth-child(even) {
+    background-color: #70F1E1;
+    color: black;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white
+}
+
+.tabla-posiciones:nth-child(odd) {
+    background-color: #6EBEF7;
+    color: white;
+    text-shadow:  -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black
+}
+
+.tabla-posiciones:nth-child(even):hover {
+  background-color:#5FE9BF
+}
+
+.tabla-posiciones:nth-child(odd):hover {
+  background-color:#68B4EB
+}
+
+.tabla-posiciones td {
+  padding: 10px;
+}
+
+#tabla-posiciones {
+  border-collapse: collapse;
+  border-spacing: 5px;
+}
+
+.numero-posicion {
+  color:red;
+  background-color: #2BE03F;
+  text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white
+}
+
+.puntaje {
+  background-color: #2BE03F;
+  color: white;
+  text-shadow:  -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}

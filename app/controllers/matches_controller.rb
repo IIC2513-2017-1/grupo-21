@@ -19,6 +19,11 @@ class MatchesController < ApplicationController
   def show
   end
 
+  def generar_partidos
+    @tournament = Tournament.find(params[:tournament_id])
+    Match.generar_partidos(@tournament)
+  end
+
   # GET /matches/new
   def new
     @match = Match.new

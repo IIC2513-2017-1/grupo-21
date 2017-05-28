@@ -66,7 +66,8 @@
 </table>
 
 <% if current_user && current_user == @tournament.user%>
-  <%= link_to 'Nuevo Partido', new_tournament_match_path(@tournament.id) %>
+  <%= link_to 'Generar Partidos', generar_partidos_path(@tournament.id), 
+  {:method => :post } %>
 <% end %>
 <%= link_to 'Volver', tournament_path(@tournament.id) %>
 

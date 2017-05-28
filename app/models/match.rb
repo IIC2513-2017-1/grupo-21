@@ -35,6 +35,17 @@ class Match < ApplicationRecord
     "#{goles_local} - #{goles_visita}"
   end
 
+  def self.generar_partidos(tournament)
+    partidos = []
+    equipos = tournament.teams
+    equipos.length.times  do |first|
+      (first + 1).upto(equipos.length - 1)  do |second|
+        tournament.matches.create(fecha: Time.now, equipo_local: equipos[first],
+        equipo_visita: equipos[second], status_match: 'fijado')
+      end
+    end
+  end
+
   private
 
   def differents_teams?

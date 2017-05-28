@@ -7,4 +7,5 @@ class Team < ApplicationRecord
 
   validates :nombre, presence: true, allow_blank: false, uniqueness: true, format: /\A[a-zA-Z ]*\z/
   validates :pais, presence: true, allow_blank: false
+
 end
