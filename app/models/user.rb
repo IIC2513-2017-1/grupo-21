@@ -13,6 +13,7 @@
 
 class User < ApplicationRecord
 
+
   has_many :tournaments
   has_many :teams
   has_secure_password

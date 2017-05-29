@@ -8,4 +8,6 @@ class Team < ApplicationRecord
   validates :nombre, presence: true, allow_blank: false, uniqueness: true, format: /\A[a-zA-Z ]*\z/
   validates :pais, presence: true, allow_blank: false
 
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end

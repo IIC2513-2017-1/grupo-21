@@ -1,10 +1,13 @@
 class TournamentsController < ApplicationController
   include Secured
 
-  before_action :set_tournament, only: [:show, :edit, :update, :destroy]
+  before_action :set_tournament, only: [:show, :edit, :update, :destroy, :terminar_torneo]
   before_action :logged_in?, only: [:new, :edit, :update, :destroy, :create]
   helper_method :dict_tipo
   before_action :is_current_user?, only: [:edit, :update, :destroy]
+  before_action :partidos_generados?, only: [:generar_partidos]
+  before_action :torneo_terminado?, only: [:generar_partidos, :edit, :terminar_torneo, :destroy]
+
 
   # GET /tournaments
   # GET /tournaments.json
@@ -12,10 +15,23 @@ class TournamentsController < ApplicationController
     @tournaments = Tournament.all
   end
 
-  
+  # def pdf
+  #     send_file Rails.root.join('private', @tournament.pdf_file_name), :type=>"application/pdf", :x_sendfile=>true
+  # end
 
   def dict_tipo
       @dict_tipo = {1 => "Liga", 2 => "Play-Off", 3 => "Liga + Play-Off"}
+  end
+
+  def generar_partidos
+    @tournament = Tournament.find(params[:id])
+    @tournament.generar_partidos
+    @tournament.update_attributes({ partidos_generados: true})
+  end
+
+  def terminar_torneo
+    @tournament.update_attributes({ estado: 'terminado'})
+    redirect_to @tournament, notice: 'Torneo finalizado correctamente' 
   end
 
   # GET /tournaments/1
@@ -85,6 +101,14 @@ class TournamentsController < ApplicationController
                       partidos_jugados: partidos_jugados}
       @tabla = Hash[ @tabla.sort_by { |key, val| val[:puntos] }.reverse ]
      Rails.logger.debug("My object: #{@tabla.inspect}")
+     @ganador = @tournament.teams.find_by_id(@tabla.max_by{|k,v| v[:puntos]}[0]).nombre
+
+    end
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: @tournament.pdf_file_name   # Excluding ".pdf" extension.
+      end
     end
 
   end
@@ -104,6 +128,7 @@ class TournamentsController < ApplicationController
     @tournament = Tournament.new(tournament_params)
     respond_to do |format|
       if @tournament.save
+        UserMailer.tournament_email(@tournament.user, @tournament).deliver_later
         format.html { redirect_to @tournament, notice: 'Tournament was successfully created.' }
         format.json { render :show, status: :created, location: @tournament }
       else
@@ -145,11 +170,21 @@ class TournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tournament_params
-      params.require(:tournament).permit(:nombre, :tipo, team_ids:[])
+      params.require(:tournament).permit(:nombre, :tipo, :pdf, team_ids:[])
             .merge(user_id: current_user.id)
     end
 
     def is_current_user?
       redirect_to(root_path, notice: 'Acceso Prohibido!') unless @tournament.user == current_user
+    end
+
+    def partidos_generados?
+      @tournament = Tournament.find(params[:id])
+      redirect_to(@tournament, notice: 'Ya generaste los partidos para el torneo!') unless !@tournament.partidos_generados
+    end
+
+    def torneo_terminado?
+      @tournament = Tournament.find(params[:id])
+      redirect_to(@tournament, notice: 'Este torneo ya terminó!') unless !(@tournament.estado == 'terminado')
     end
 end

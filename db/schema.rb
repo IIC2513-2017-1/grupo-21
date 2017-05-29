@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528051348) do
+ActiveRecord::Schema.define(version: 20170529020635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,11 +63,15 @@ ActiveRecord::Schema.define(version: 20170528051348) do
   end
 
   create_table "teams", force: :cascade do |t|
-    t.string   "nombre",     null: false
-    t.string   "pais",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre",              null: false
+    t.string   "pais",                null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["user_id"], name: "index_teams_on_user_id", using: :btree
   end
 
@@ -87,6 +91,11 @@ ActiveRecord::Schema.define(version: 20170528051348) do
     t.datetime "updated_at",         null: false
     t.integer  "user_id"
     t.boolean  "partidos_generados"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.string   "estado"
     t.index ["user_id"], name: "index_tournaments_on_user_id", using: :btree
   end
 

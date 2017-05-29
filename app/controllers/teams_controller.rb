@@ -73,7 +73,7 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:nombre, :pais).merge(user_id: current_user.id)
+      params.require(:team).permit(:nombre, :pais, :avatar).merge(user_id: current_user.id)
     end
 
     def is_current_user?

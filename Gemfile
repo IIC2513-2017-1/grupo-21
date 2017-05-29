@@ -41,6 +41,9 @@ group :development do
   gem "better_errors"
 end
 gem 'jquery-ui-rails'
+gem "paperclip"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 
 # Use Capistrano for deployment

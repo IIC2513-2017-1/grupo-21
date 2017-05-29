@@ -1,0 +1,35 @@
+<p>
+  Estimado/a <%= @user.full_name %>,
+</p>
+
+<p>
+  Has creado un nuevo torneo:
+  <p>
+    <strong>Nombre:</strong>
+    <%= @tournament.nombre %>
+  </p>
+
+  <p>
+    <strong>Tipo:</strong>
+    <% if @tournament.tipo == 1 %>
+    <%= "Liga" %>
+    <% elsif @tournament.tipo == 2 %>
+    <%= "Play-Off" %>
+    <% elsif @tournament.tipo == 3 %>
+    <%= "Liga + Play-Off" %>
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Participantes:</strong>
+    <% @tournament.teams.each do |team| %>
+      <br>
+      <%= team.nombre %>
+    <% end %>
+  </p>
+</p>
+
+<p>
+  Nuestros mejores deseos,<br/>
+  Organiza2
+</p>

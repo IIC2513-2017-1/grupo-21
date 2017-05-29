@@ -8,6 +8,13 @@
   <strong>Pais:</strong>
   <%= @team.pais %>
 </p>
+<% if !(@team.avatar.url == '/images/original/missing.png') %>
+<p>
+  <strong>Logo del equipo:</strong> <br>
+  <%= image_tag @team.avatar.url %>
+</p>
+<% end %>
+
 
 <p>
   <strong>Jugadores:</strong>

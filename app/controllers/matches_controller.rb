@@ -19,10 +19,7 @@ class MatchesController < ApplicationController
   def show
   end
 
-  def generar_partidos
-    @tournament = Tournament.find(params[:tournament_id])
-    Match.generar_partidos(@tournament)
-  end
+
 
   # GET /matches/new
   def new
@@ -113,6 +110,6 @@ class MatchesController < ApplicationController
     end
 
     def is_finished?
-      redirect_to(root_path, notice: 'Este partido ya terminó!') unless @match.status_match == 'fijado'
+      redirect_to(tournament_matches_path(@tournament), notice: 'Este partido ya terminó!') unless @match.status_match == 'fijado'
     end
 end
