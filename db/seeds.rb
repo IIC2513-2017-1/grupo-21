@@ -9,6 +9,7 @@
 Team.delete_all
 Player.delete_all
 User.delete_all
+Tournament.delete_all
 
 my_user = User.create!(first_name: "Isaac", last_name: "Carrera",
 email: "isfecave@gmail.com", password: "asdasd")
