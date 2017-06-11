@@ -60,9 +60,13 @@ class TeamsController < ApplicationController
   def destroy
     @team.destroy
     respond_to do |format|
-      format.html { redirect_to teams_url, notice: 'Team was successfully destroyed.' }
+      format.html do
+         redirect_to teams_url, notice: 'Team was successfully destroyed.' 
+      end
       format.json { head :no_content }
+      format.js
     end
+
   end
 
   private
