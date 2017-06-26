@@ -20,4 +20,12 @@ Rails.application.routes.draw do
   get 'tournaments/:id/terminar_torneo', to: 'tournaments#terminar_torneo', as: 'terminar_torneo'
   # get "tournaments/:id/pdf", to: "tournaments#pdf", as: 'pdf'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :api do
+    namespace :v1 do
+      resources :tournaments, only: [:index, :show]
+      resources :users, only: [:show]
+      resources :teams, only: [:index, :create, :show]
+    end
+  end
 end
