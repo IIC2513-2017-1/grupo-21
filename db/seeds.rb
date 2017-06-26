@@ -13,6 +13,7 @@ Tournament.delete_all
 
 my_user = User.create!(first_name: "Isaac", last_name: "Carrera",
 email: "isfecave@gmail.com", password: "asdasd")
+my_user.generate_token_and_save
 
 usuarios = []
 usuarios << my_user

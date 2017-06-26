@@ -9,7 +9,7 @@ module Api::V1
     def create
       @team = @current_user.teams.build(team_params)
       return if @team.save
-      render json: { errors: @team.errors }, status: :unprocessable_entity
+      render json: { errors: @team.errors }, status: "Falló la petición"
     end
 
     def show
