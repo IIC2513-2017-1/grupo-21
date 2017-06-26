@@ -2,5 +2,5 @@
 
 <%= render 'form', match: @match %>
 
-<%= link_to 'Mostrar información', tournament_match_path(@tournament, @match) %> |
-<%= link_to 'Volver', tournament_matches_path(@tournament.id) %>
+<%= link_to 'Mostrar información', tournament_match_path(@tournament, @match), :class=>"button-generic" %> |
+<%= link_to 'Volver', tournament_matches_path(@tournament.id), :class=>"button-generic" %>

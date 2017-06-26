@@ -23,9 +23,9 @@
     <%= player.apellido + ", " + player.nombre %>
   <% end %>
 </p>
-<%= link_to 'Ver jugadores', team_players_path(@team.id) %>
+<%= link_to 'Ver jugadores', team_players_path(@team.id), :class=>"button-generic" %>
 <% if current_user && current_user == @team.user%>
-  <%= link_to 'Agregar jugadores', new_team_player_path(@team.id) %>
-  <%= link_to 'Editar', edit_team_path(@team) %> |
+  <%= link_to 'Agregar jugadores', new_team_player_path(@team.id), :class=>"button-generic" %>
+  <%= link_to 'Editar', edit_team_path(@team), :class=>"button-generic" %> |
 <%end%>
-<%= link_to 'Volver', teams_path %>
+<%= link_to 'Volver', teams_path, :class=>"button-generic" %>

@@ -15,10 +15,10 @@
       <tr data-team-id="<%= team.id %>">
         <td><%= team.nombre %></td>
         <td><%= team.pais %></td>
-        <td><%= link_to 'Mostrar información', team %></td>
+        <td><%= link_to 'Mostrar información', team, :class=>"button-generic" %></td>
         <% if current_user && current_user == team.user%>
-          <td><%= link_to 'Editar', edit_team_path(team) %></td>
-          <td><%= link_to 'Borrar', team, method: :delete, data: { confirm: 'Estás seguro?' }, remote: true %></td>
+          <td><%= link_to 'Editar', edit_team_path(team), :class=>"button-generic" %></td>
+          <td><%= link_to 'Borrar', team, method: :delete, data: { confirm: 'Estás seguro?' }, remote: true, :class=>"button-generic" %></td>
         <%end%>
       </tr>
     <% end %>
@@ -27,5 +27,5 @@
 
 <br>
 
-<%= link_to 'Nuevo equipo', new_team_path %>
+<%= link_to 'Nuevo equipo', new_team_path, :class=>"button-generic" %>
 </div>

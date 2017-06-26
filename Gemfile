@@ -44,6 +44,8 @@ gem 'jquery-ui-rails'
 gem "paperclip"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'httparty'
+gem 'json'
 
 
 # Use Capistrano for deployment

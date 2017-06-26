@@ -37,13 +37,15 @@ body {
 
 main {
   position: static;
-  margin: 0 50px;
+  margin: auto;
   border: 2px solid #32797F;
   border-radius: 10px;
-  background-color: white;
+  background: rgba(10, 10, 10, 0.8);
   padding: 20px;
   overflow: scroll;
   height: 450px;
+  width: 900px;
+  color: aliceblue;
 }
 /*
 nav#main-menu, #logo {
@@ -130,5 +132,82 @@ footer a{
 }
 
 .notice {
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: #aa85d0;
+}
+
+.button-generic {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 10px;
+}
+
+.blue-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #1d87b1;
+}
+
+.blue-button:hover {
+    background-color: #1d87b1;
+    color: white;
+}
+
+.red-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #dc474d;
+}
+
+.red-button:hover {
+    background-color: #dc474d;
+    color: white;
+}
+
+.yellow-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #fdde37;
+}
+
+.yellow-button:hover {
+    background-color: #fdde37;
+}
+
+.new-resource {
+  background-color: #f39c12
+}
+
+.new-resource {
+  background-color: #f39c12;
+  color: white;
+  border: 2px solid white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.new-resource:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #f39c12;
+  text-shadow: none;
+
+}
+
+input:not(.submit) {
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  height: 25px;
+  border: 2px solid darkgrey;
+  border-radius: 10px;
 }

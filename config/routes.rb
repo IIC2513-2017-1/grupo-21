@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sport_news', to: 'sport_news#index', as: 'sport_news'
+
   resources :users
   resources :tournaments do
     resources :matches

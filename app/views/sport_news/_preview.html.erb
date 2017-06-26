@@ -1,0 +1,15 @@
+<div class="titulo-noticia">
+<%= articulo["title"]%>
+</div>
+<br>
+<div class="descripcion-noticia">
+<%= articulo["description"]%>
+</div>
+<br>
+<div class="imagen-noticia">
+<%= image_tag articulo['urlToImage'], style: 'height:200px;width:auto;', :class=>"center" %>
+</div>
+<br>
+<%= link_to "Ir a la noticia", articulo["url"], :class=>"button-generic"%>
+
+<br><hr id="linea"><br>

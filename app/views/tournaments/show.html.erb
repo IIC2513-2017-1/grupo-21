@@ -68,7 +68,7 @@
     </tbody>
   </table>
 
-<%= link_to 'Terminar Torneo', terminar_torneo_path(@tournament.id) %>
+<%= link_to 'Terminar Torneo', terminar_torneo_path(@tournament.id), :class=>"button-generic" %>
 <% else %>
 <p>
   <strong>Ganador:</strong>
@@ -76,14 +76,14 @@
 </p>
 <% end %>
 <br>
-<%= link_to 'Ver partidos', tournament_matches_path(@tournament.id) %>
+<%= link_to 'Ver partidos', tournament_matches_path(@tournament.id), :class=>"button-generic" %>
 <% if current_user && current_user == @tournament.user%>
 <% if !(@tournament.estado == 'terminado') %>
-  <%= link_to 'Editar', edit_tournament_path(@tournament) %> |
+  <%= link_to 'Editar', edit_tournament_path(@tournament), :class=>"button-generic" %> |
   <% end %>
   <% if !@tournament.partidos_generados %>
-  <%= Rails.logger.debug("generados? #{@tournament.partidos_generados.inspect}") %>
-    <%= link_to 'Generar Partidos', generar_partidos_path(@tournament.id)%>
+  <!-- <%= Rails.logger.debug("generados? #{@tournament.partidos_generados.inspect}") %> -->
+    <%= link_to 'Generar Partidos', generar_partidos_path(@tournament.id), :class=>"button-generic"%>
   <% end %>
 <%end%>
-<%= link_to 'Volver', tournaments_path %>
+<%= link_to 'Volver', tournaments_path, :class=>"button-generic" %>

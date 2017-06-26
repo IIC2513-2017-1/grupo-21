@@ -1,0 +1,6 @@
+<h1 class="center" id="titulo-pagina">Last Sport News</h1><h3 class="center">(powered by: BBCsports)</h3>
+<ol>
+    <% @articulos.each do |articulo| %>
+      <%= render 'sport_news/preview', articulo: articulo %>
+    <% end %>
+</ol>

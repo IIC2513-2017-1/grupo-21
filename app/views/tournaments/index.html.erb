@@ -19,10 +19,10 @@
         <td><%= dict_tipo[tournament.tipo]  %></td>
         <td><%= tournament.team_ids.length  %></td>
         <td><%= tournament.user.email  %></td>
-        <td><%= link_to 'Mostrar', tournament %></td>
+        <td><%= link_to 'Mostrar', tournament, :class=>"button-generic red-button" %></td>
         <% if current_user && current_user == tournament.user%>
-          <td><%= link_to 'Editar', edit_tournament_path(tournament) %></td>
-          <td><%= link_to 'Borrar', tournament, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+          <td><%= link_to 'Editar', edit_tournament_path(tournament), :class=>"button-generic yellow-button" %></td>
+          <td><%= link_to 'Borrar', tournament, method: :delete, data: { confirm: 'Estás seguro?' }, :class=>"button-generic blue-button" %></td>
         <%end%>
       </tr>
     <% end %>
@@ -30,5 +30,5 @@
 </table>
 
 <br>
-<%= link_to 'Nuevo campeonato', new_tournament_path %>
+<%= link_to 'Nuevo campeonato', new_tournament_path, :class=>"button-generic new-resource" %>
 </div>

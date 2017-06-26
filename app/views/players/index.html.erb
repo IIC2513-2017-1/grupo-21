@@ -21,10 +21,10 @@
         <td><%= player.pais %></td>
         <td><%= player.edad %></td>
         <td><%= player.team.nombre %></td>
-        <td><%= link_to 'Mostrar información', team_player_path(@team, player) %></td>
+        <td><%= link_to 'Mostrar información', team_player_path(@team, player), :class=>"button-generic" %></td>
         <% if current_user && current_user == player.team.user%>
-          <td><%= link_to 'Editar', edit_team_player_path(@team, player) %></td>
-          <td><%= link_to 'Borrar', team_player_path(@team, player), method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+          <td><%= link_to 'Editar', edit_team_player_path(@team, player), :class=>"button-generic" %></td>
+          <td><%= link_to 'Borrar', team_player_path(@team, player), method: :delete, data: { confirm: 'Estás seguro?' }, :class=>"button-generic" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -33,7 +33,7 @@
 
 <br>
 <% if current_user && current_user == @team.user%>
-  <%= link_to 'Nuevo jugador', new_team_player_path(@team.id) %>
+  <%= link_to 'Nuevo jugador', new_team_player_path(@team.id), :class=>"button-generic" %>
 <% end %>
-<%= link_to 'Volver', team_path(@team.id) %>
+<%= link_to 'Volver', team_path(@team.id), :class=>"button-generic" %>
 </div>

@@ -19,6 +19,6 @@
 
 
 <% if current_user%>
-  <%= link_to 'Editar', edit_user_path(@user) %> |
+  <%= link_to 'Editar', edit_user_path(@user), :class=>"button-generic" %> |
 <% end %>
-<%= link_to 'Volver', users_path %>
+<%= link_to 'Volver', users_path, :class=>"button-generic" %>

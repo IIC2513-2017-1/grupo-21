@@ -25,6 +25,6 @@
 </p>
 
 <% if current_user && current_user == @player.team.user%>
-  <%= link_to 'Editar', edit_team_player_path(@team, @player) %> |
+  <%= link_to 'Editar', edit_team_player_path(@team, @player), :class=>"button-generic" %> |
 <% end %>
-<%= link_to 'Volver', team_players_path(@team.id) %>
+<%= link_to 'Volver', team_players_path(@team.id), :class=>"button-generic" %>

@@ -1,0 +1,24 @@
+// Place all the styles related to the SportNews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.center {
+  text-align: center;
+}
+#linea {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #a1ff7d;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#titulo-pagina {
+  font-size: 50px;
+  color: #a1ff7d;
+
+}
+
+.titulo-noticia {
+  font-size: 20px;
+}
