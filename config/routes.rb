@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :tournaments, only: [:index, :show]
       resources :users, only: [:show]
-      resources :teams, only: [:index, :create, :show]
+      resources :teams
     end
   end
 end
