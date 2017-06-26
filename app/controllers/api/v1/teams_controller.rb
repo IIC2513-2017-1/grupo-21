@@ -1,6 +1,6 @@
 module Api::V1
   class TeamsController < ApiController
-    before_action :authenticate
+    skip_before_action :authenticate
 
     def index
       @teams = Team.all
