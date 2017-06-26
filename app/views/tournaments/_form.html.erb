@@ -5,6 +5,6 @@
     {include_blank: true}, :required => true %>
   <% end %>
   <%= f.association :teams, label_method: :nombre, as: :check_boxes %>
-  <%= f.input :pdf, as: :file %>
-  <%= f.button :submit %>
+  <%= f.input :pdf, as: :file, :class=>"button-generic" %>
+  <%= f.button :submit, :class=>"button-generic" %>
 <% end %>

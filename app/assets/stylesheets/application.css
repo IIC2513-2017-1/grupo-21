@@ -135,6 +135,10 @@ footer a{
   color: #aa85d0;
 }
 
+.alert {
+  color: #aa85d0;
+}
+
 .button-generic {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -202,7 +206,7 @@ footer a{
 
 }
 
-input:not(.submit) {
+.form-input {
   padding: 12px 10px;
   margin: 8px 0;
   box-sizing: border-box;
