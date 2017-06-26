@@ -31,6 +31,7 @@
 </p>
 <br>
 <% if !(@tournament.estado == 'terminado') %>
+<div class="center">
   <table id="tabla-posiciones">
     <thead>
       <tr>
@@ -67,6 +68,7 @@
       <% end %>
     </tbody>
   </table>
+</div>
 
 <%= link_to 'Terminar Torneo', terminar_torneo_path(@tournament.id), :class=>"button-generic" %>
 <% else %>

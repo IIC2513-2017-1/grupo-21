@@ -31,7 +31,7 @@ class TournamentsController < ApplicationController
 
   def terminar_torneo
     @tournament.update_attributes({ estado: 'terminado'})
-    redirect_to @tournament, notice: 'Torneo finalizado correctamente' 
+    redirect_to @tournament, notice: 'Torneo finalizado correctamente'
   end
 
   # GET /tournaments/1
@@ -99,7 +99,7 @@ class TournamentsController < ApplicationController
                         partidos_perdidos: partidos_perdidos, partidos_ganados: partidos_ganados,
                       goles_favor: goles_favor, goles_contra: goles_contra,
                       partidos_jugados: partidos_jugados}
-      @tabla = Hash[ @tabla.sort_by { |key, val| val[:puntos] }.reverse ]
+      @tabla = Hash[ @tabla.sort_by { |key, val| [val[:puntos], val[:goles_favor]-val[:goles_contra], val[:goles_favor]] }.reverse ]
      Rails.logger.debug("My object: #{@tabla.inspect}")
      @ganador = @tournament.teams.find_by_id(@tabla.max_by{|k,v| v[:puntos]}[0]).nombre
 
