@@ -19,7 +19,7 @@ module Api::V1
     private
 
     def team_params
-      params.require(:team).permit(:nombre, :pais)
+      params.permit(:nombre, :pais)
     end
   end
 end
